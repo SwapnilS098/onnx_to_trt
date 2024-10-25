@@ -1,0 +1,4 @@
+
+
+
+python onnx_trt_main.py --model_path C:\Swapnil\Narrowband_DRONE\Image_compression_code\Final_DL_compession_September_24\fine_tune_to_trt\checkpoint_best_loss.pth.tar --model_name bmshj2018-factorized --quality=4 --metric mse --image_dataset_path C:\Swapnil\Narrowband_DRONE\Image_compression_code\Final_DL_compession_September_24\fine_tune_to_trt\org_dataset --project_path C:\Swapnil\Narrowband_DRONE\Image_compression_code\Final_DL_compession_September_24\fine_tune_to_trt\pj1 --input_shape[720,1280] --trt_model_name bmshj_4_HD

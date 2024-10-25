@@ -1,0 +1,4161 @@
+cuda
+Model exists
+PyTorch Model is:
+FactorizedPrior(
+  (entropy_bottleneck): EntropyBottleneck(
+    (likelihood_lower_bound): LowerBound()
+    (matrices): ParameterList(
+        (0): Parameter containing: [torch.float32 of size 192x3x1]
+        (1): Parameter containing: [torch.float32 of size 192x3x3]
+        (2): Parameter containing: [torch.float32 of size 192x3x3]
+        (3): Parameter containing: [torch.float32 of size 192x3x3]
+        (4): Parameter containing: [torch.float32 of size 192x1x3]
+    )
+    (biases): ParameterList(
+        (0): Parameter containing: [torch.float32 of size 192x3x1]
+        (1): Parameter containing: [torch.float32 of size 192x3x1]
+        (2): Parameter containing: [torch.float32 of size 192x3x1]
+        (3): Parameter containing: [torch.float32 of size 192x3x1]
+        (4): Parameter containing: [torch.float32 of size 192x1x1]
+    )
+    (factors): ParameterList(
+        (0): Parameter containing: [torch.float32 of size 192x3x1]
+        (1): Parameter containing: [torch.float32 of size 192x3x1]
+        (2): Parameter containing: [torch.float32 of size 192x3x1]
+        (3): Parameter containing: [torch.float32 of size 192x3x1]
+    )
+  )
+  (g_a): Sequential(
+    (0): Conv2d(3, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (5): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (6): Conv2d(128, 192, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+  )
+  (g_s): Sequential(
+    (0): ConvTranspose2d(192, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (5): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (6): ConvTranspose2d(128, 3, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+  )
+)
+======================================
+The model is exported to the ONNX version
+shape of x is: (1, 3, 1232, 1640)
+the Model: None  is exported
+Model exists
+PyTorch Model is:
+FactorizedPrior(
+  (entropy_bottleneck): EntropyBottleneck(
+    (likelihood_lower_bound): LowerBound()
+    (matrices): ParameterList(
+        (0): Parameter containing: [torch.float32 of size 192x3x1]
+        (1): Parameter containing: [torch.float32 of size 192x3x3]
+        (2): Parameter containing: [torch.float32 of size 192x3x3]
+        (3): Parameter containing: [torch.float32 of size 192x3x3]
+        (4): Parameter containing: [torch.float32 of size 192x1x3]
+    )
+    (biases): ParameterList(
+        (0): Parameter containing: [torch.float32 of size 192x3x1]
+        (1): Parameter containing: [torch.float32 of size 192x3x1]
+        (2): Parameter containing: [torch.float32 of size 192x3x1]
+        (3): Parameter containing: [torch.float32 of size 192x3x1]
+        (4): Parameter containing: [torch.float32 of size 192x1x1]
+    )
+    (factors): ParameterList(
+        (0): Parameter containing: [torch.float32 of size 192x3x1]
+        (1): Parameter containing: [torch.float32 of size 192x3x1]
+        (2): Parameter containing: [torch.float32 of size 192x3x1]
+        (3): Parameter containing: [torch.float32 of size 192x3x1]
+    )
+  )
+  (g_a): Sequential(
+    (0): Conv2d(3, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (5): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (6): Conv2d(128, 192, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+  )
+  (g_s): Sequential(
+    (0): ConvTranspose2d(192, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (5): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (6): ConvTranspose2d(128, 3, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+  )
+)
+======================================
+Model Information:
+IR Version: 7
+Producer Name: pytorch
+Producer Version: 2.2.0
+Opset Import: [version: 14
+]
+Model Domain: 
+Model Doc String: 
+
+Graph Information:
+Graph Name: main_graph
+Graph Inputs: ['input']
+Graph Outputs: ['output', '279']
+Number of Nodes: 310
+
+Model Layers (Nodes):
+
+Node Name: Identity_75
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['g_s.5.gamma_reparam.lower_bound.bound']
+
+Node Name: Identity_76
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.5.gamma_reparam.pedestal']
+
+Node Name: Identity_77
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['g_s.5.beta_reparam.lower_bound.bound']
+
+Node Name: Identity_78
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.5.beta_reparam.pedestal']
+
+Node Name: Identity_79
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['g_s.3.gamma_reparam.lower_bound.bound']
+
+Node Name: Identity_80
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.3.gamma_reparam.pedestal']
+
+Node Name: Identity_81
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['g_s.3.beta_reparam.lower_bound.bound']
+
+Node Name: Identity_82
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.3.beta_reparam.pedestal']
+
+Node Name: Identity_83
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['g_s.1.gamma_reparam.lower_bound.bound']
+
+Node Name: Identity_84
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.1.gamma_reparam.pedestal']
+
+Node Name: Identity_85
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['g_s.1.beta_reparam.lower_bound.bound']
+
+Node Name: Identity_86
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.1.beta_reparam.pedestal']
+
+Node Name: Identity_87
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['g_a.5.gamma_reparam.lower_bound.bound']
+
+Node Name: Identity_88
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_a.5.gamma_reparam.pedestal']
+
+Node Name: Identity_89
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['g_a.5.beta_reparam.lower_bound.bound']
+
+Node Name: Identity_90
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_a.5.beta_reparam.pedestal']
+
+Node Name: Identity_91
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['g_a.3.gamma_reparam.lower_bound.bound']
+
+Node Name: Identity_92
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_a.3.gamma_reparam.pedestal']
+
+Node Name: Identity_93
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['g_a.3.beta_reparam.lower_bound.bound']
+
+Node Name: Identity_94
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_a.3.beta_reparam.pedestal']
+
+Node Name: Identity_95
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_a.1.gamma_reparam.pedestal']
+
+Node Name: /g_a/g_a.0/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.0/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.0/Conv
+  - Operator Type: Conv
+  - Inputs: ['input', 'g_a.0.weight', 'g_a.0.bias']
+  - Outputs: ['/g_a/g_a.0/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.1/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_a/g_a.0/Conv_output_0']
+  - Outputs: ['/g_a/g_a.1/Shape_output_0']
+
+Node Name: /g_a/g_a.1/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_a/g_a.1/Shape_output_0', '/g_a/g_a.1/Constant_output_0']
+  - Outputs: ['/g_a/g_a.1/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.1/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.1.beta', 'g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.1/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.1/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/beta_reparam/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/beta_reparam/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.1/beta_reparam/lower_bound/Max_output_0', '/g_a/g_a.1/beta_reparam/Constant_1_output_0']
+  - Outputs: ['/g_a/g_a.1/beta_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.1/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.1/beta_reparam/Pow_output_0', 'g_a.1.beta_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.1/beta_reparam/Sub_output_0']
+
+Node Name: /g_a/g_a.1/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.1.gamma', 'g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.1/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.1/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.1/gamma_reparam/lower_bound/Max_output_0', '/g_a/g_a.1/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_a/g_a.1/gamma_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.1/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.1/gamma_reparam/Pow_output_0', 'g_a.1.gamma_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.1/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_110
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_87']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.1/Gather_output_0', 'onnx::Unsqueeze_87']
+  - Outputs: ['/g_a/g_a.1/Unsqueeze_output_0']
+
+Node Name: Constant_112
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_89']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.1/Gather_output_0', 'onnx::Unsqueeze_89']
+  - Outputs: ['/g_a/g_a.1/Unsqueeze_1_output_0']
+
+Node Name: Constant_114
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_91']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_91']
+  - Outputs: ['/g_a/g_a.1/Unsqueeze_2_output_0']
+
+Node Name: Constant_116
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_93']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_93']
+  - Outputs: ['/g_a/g_a.1/Unsqueeze_3_output_0']
+
+Node Name: /g_a/g_a.1/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_a/g_a.1/Unsqueeze_output_0', '/g_a/g_a.1/Unsqueeze_1_output_0', '/g_a/g_a.1/Unsqueeze_2_output_0', '/g_a/g_a.1/Unsqueeze_3_output_0']
+  - Outputs: ['/g_a/g_a.1/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.1/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_a/g_a.1/gamma_reparam/Sub_output_0', '/g_a/g_a.1/Concat_output_0']
+  - Outputs: ['/g_a/g_a.1/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_a/g_a.1/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.0/Conv_output_0', '/g_a/g_a.1/Constant_1_output_0']
+  - Outputs: ['/g_a/g_a.1/Pow_output_0']
+
+Node Name: /g_a/g_a.1/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.1/Pow_output_0', '/g_a/g_a.1/Reshape_output_0', '/g_a/g_a.1/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_a/g_a.1/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.1/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_a/g_a.1/Conv_output_0']
+  - Outputs: ['/g_a/g_a.1/Sqrt_output_0']
+
+Node Name: /g_a/g_a.1/Constant_2
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/Constant_2_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Div
+  - Operator Type: Div
+  - Inputs: ['/g_a/g_a.1/Constant_2_output_0', '/g_a/g_a.1/Sqrt_output_0']
+  - Outputs: ['/g_a/g_a.1/Div_output_0']
+
+Node Name: /g_a/g_a.1/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_a/g_a.0/Conv_output_0', '/g_a/g_a.1/Div_output_0']
+  - Outputs: ['/g_a/g_a.1/Mul_output_0']
+
+Node Name: /g_a/g_a.2/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.1/Mul_output_0', 'g_a.2.weight', 'g_a.2.bias']
+  - Outputs: ['/g_a/g_a.2/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.3/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_a/g_a.2/Conv_output_0']
+  - Outputs: ['/g_a/g_a.3/Shape_output_0']
+
+Node Name: /g_a/g_a.3/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.3/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_a/g_a.3/Shape_output_0', '/g_a/g_a.3/Constant_output_0']
+  - Outputs: ['/g_a/g_a.3/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.3/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.3.beta', 'g_a.3.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.3/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.3/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.3/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.3/beta_reparam/lower_bound/Max_output_0', '/g_a/g_a.3/beta_reparam/Constant_output_0']
+  - Outputs: ['/g_a/g_a.3/beta_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.3/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.3/beta_reparam/Pow_output_0', 'g_a.3.beta_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.3/beta_reparam/Sub_output_0']
+
+Node Name: /g_a/g_a.3/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.3.gamma', 'g_a.3.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.3/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.3/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.3/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.3/gamma_reparam/lower_bound/Max_output_0', '/g_a/g_a.3/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_a/g_a.3/gamma_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.3/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.3/gamma_reparam/Pow_output_0', 'g_a.3.gamma_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.3/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_139
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_116']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.3/Gather_output_0', 'onnx::Unsqueeze_116']
+  - Outputs: ['/g_a/g_a.3/Unsqueeze_output_0']
+
+Node Name: Constant_141
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_118']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.3/Gather_output_0', 'onnx::Unsqueeze_118']
+  - Outputs: ['/g_a/g_a.3/Unsqueeze_1_output_0']
+
+Node Name: Constant_143
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_120']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_120']
+  - Outputs: ['/g_a/g_a.3/Unsqueeze_2_output_0']
+
+Node Name: Constant_145
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_122']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_122']
+  - Outputs: ['/g_a/g_a.3/Unsqueeze_3_output_0']
+
+Node Name: /g_a/g_a.3/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_a/g_a.3/Unsqueeze_output_0', '/g_a/g_a.3/Unsqueeze_1_output_0', '/g_a/g_a.3/Unsqueeze_2_output_0', '/g_a/g_a.3/Unsqueeze_3_output_0']
+  - Outputs: ['/g_a/g_a.3/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.3/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_a/g_a.3/gamma_reparam/Sub_output_0', '/g_a/g_a.3/Concat_output_0']
+  - Outputs: ['/g_a/g_a.3/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_a/g_a.3/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.3/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.2/Conv_output_0', '/g_a/g_a.3/Constant_1_output_0']
+  - Outputs: ['/g_a/g_a.3/Pow_output_0']
+
+Node Name: /g_a/g_a.3/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.3/Pow_output_0', '/g_a/g_a.3/Reshape_output_0', '/g_a/g_a.3/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_a/g_a.3/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.3/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_a/g_a.3/Conv_output_0']
+  - Outputs: ['/g_a/g_a.3/Sqrt_output_0']
+
+Node Name: /g_a/g_a.3/Constant_2
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.3/Constant_2_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Div
+  - Operator Type: Div
+  - Inputs: ['/g_a/g_a.3/Constant_2_output_0', '/g_a/g_a.3/Sqrt_output_0']
+  - Outputs: ['/g_a/g_a.3/Div_output_0']
+
+Node Name: /g_a/g_a.3/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_a/g_a.2/Conv_output_0', '/g_a/g_a.3/Div_output_0']
+  - Outputs: ['/g_a/g_a.3/Mul_output_0']
+
+Node Name: /g_a/g_a.4/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.3/Mul_output_0', 'g_a.4.weight', 'g_a.4.bias']
+  - Outputs: ['/g_a/g_a.4/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.5/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_a/g_a.4/Conv_output_0']
+  - Outputs: ['/g_a/g_a.5/Shape_output_0']
+
+Node Name: /g_a/g_a.5/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.5/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_a/g_a.5/Shape_output_0', '/g_a/g_a.5/Constant_output_0']
+  - Outputs: ['/g_a/g_a.5/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.5/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.5.beta', 'g_a.5.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.5/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.5/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.5/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.5/beta_reparam/lower_bound/Max_output_0', '/g_a/g_a.5/beta_reparam/Constant_output_0']
+  - Outputs: ['/g_a/g_a.5/beta_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.5/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.5/beta_reparam/Pow_output_0', 'g_a.5.beta_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.5/beta_reparam/Sub_output_0']
+
+Node Name: /g_a/g_a.5/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.5.gamma', 'g_a.5.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.5/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.5/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.5/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.5/gamma_reparam/lower_bound/Max_output_0', '/g_a/g_a.5/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_a/g_a.5/gamma_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.5/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.5/gamma_reparam/Pow_output_0', 'g_a.5.gamma_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.5/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_168
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_145']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.5/Gather_output_0', 'onnx::Unsqueeze_145']
+  - Outputs: ['/g_a/g_a.5/Unsqueeze_output_0']
+
+Node Name: Constant_170
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_147']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.5/Gather_output_0', 'onnx::Unsqueeze_147']
+  - Outputs: ['/g_a/g_a.5/Unsqueeze_1_output_0']
+
+Node Name: Constant_172
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_149']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_149']
+  - Outputs: ['/g_a/g_a.5/Unsqueeze_2_output_0']
+
+Node Name: Constant_174
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_151']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_151']
+  - Outputs: ['/g_a/g_a.5/Unsqueeze_3_output_0']
+
+Node Name: /g_a/g_a.5/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_a/g_a.5/Unsqueeze_output_0', '/g_a/g_a.5/Unsqueeze_1_output_0', '/g_a/g_a.5/Unsqueeze_2_output_0', '/g_a/g_a.5/Unsqueeze_3_output_0']
+  - Outputs: ['/g_a/g_a.5/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.5/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_a/g_a.5/gamma_reparam/Sub_output_0', '/g_a/g_a.5/Concat_output_0']
+  - Outputs: ['/g_a/g_a.5/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_a/g_a.5/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.5/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.4/Conv_output_0', '/g_a/g_a.5/Constant_1_output_0']
+  - Outputs: ['/g_a/g_a.5/Pow_output_0']
+
+Node Name: /g_a/g_a.5/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.5/Pow_output_0', '/g_a/g_a.5/Reshape_output_0', '/g_a/g_a.5/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_a/g_a.5/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.5/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_a/g_a.5/Conv_output_0']
+  - Outputs: ['/g_a/g_a.5/Sqrt_output_0']
+
+Node Name: /g_a/g_a.5/Constant_2
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.5/Constant_2_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Div
+  - Operator Type: Div
+  - Inputs: ['/g_a/g_a.5/Constant_2_output_0', '/g_a/g_a.5/Sqrt_output_0']
+  - Outputs: ['/g_a/g_a.5/Div_output_0']
+
+Node Name: /g_a/g_a.5/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_a/g_a.4/Conv_output_0', '/g_a/g_a.5/Div_output_0']
+  - Outputs: ['/g_a/g_a.5/Mul_output_0']
+
+Node Name: /g_a/g_a.6/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.5/Mul_output_0', 'g_a.6.weight', 'g_a.6.bias']
+  - Outputs: ['/g_a/g_a.6/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /entropy_bottleneck/Transpose
+  - Operator Type: Transpose
+  - Inputs: ['/g_a/g_a.6/Conv_output_0']
+  - Outputs: ['/entropy_bottleneck/Transpose_output_0']
+  - Attribute Name: perm
+
+Node Name: /entropy_bottleneck/Shape
+  - Operator Type: Shape
+  - Inputs: ['/entropy_bottleneck/Transpose_output_0']
+  - Outputs: ['/entropy_bottleneck/Shape_output_0']
+
+Node Name: /entropy_bottleneck/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Gather
+  - Operator Type: Gather
+  - Inputs: ['/entropy_bottleneck/Shape_output_0', '/entropy_bottleneck/Constant_output_0']
+  - Outputs: ['/entropy_bottleneck/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Shape_1
+  - Operator Type: Shape
+  - Inputs: ['/entropy_bottleneck/Transpose_output_0']
+  - Outputs: ['/entropy_bottleneck/Shape_1_output_0']
+
+Node Name: /entropy_bottleneck/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Gather_1
+  - Operator Type: Gather
+  - Inputs: ['/entropy_bottleneck/Shape_1_output_0', '/entropy_bottleneck/Constant_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Gather_1_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Shape_2
+  - Operator Type: Shape
+  - Inputs: ['/entropy_bottleneck/Transpose_output_0']
+  - Outputs: ['/entropy_bottleneck/Shape_2_output_0']
+
+Node Name: /entropy_bottleneck/Constant_2
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_2_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Gather_2
+  - Operator Type: Gather
+  - Inputs: ['/entropy_bottleneck/Shape_2_output_0', '/entropy_bottleneck/Constant_2_output_0']
+  - Outputs: ['/entropy_bottleneck/Gather_2_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Shape_3
+  - Operator Type: Shape
+  - Inputs: ['/entropy_bottleneck/Transpose_output_0']
+  - Outputs: ['/entropy_bottleneck/Shape_3_output_0']
+
+Node Name: /entropy_bottleneck/Constant_3
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_3_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Gather_3
+  - Operator Type: Gather
+  - Inputs: ['/entropy_bottleneck/Shape_3_output_0', '/entropy_bottleneck/Constant_3_output_0']
+  - Outputs: ['/entropy_bottleneck/Gather_3_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Constant_4
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_4_output_0']
+  - Attribute Name: value
+
+Node Name: Constant_200
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_177']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_output_0', 'onnx::Unsqueeze_177']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_output_0']
+
+Node Name: Constant_202
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_179']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_179']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_1_output_0']
+
+Node Name: Constant_204
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_181']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Constant_4_output_0', 'onnx::Unsqueeze_181']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_2_output_0']
+
+Node Name: /entropy_bottleneck/Concat
+  - Operator Type: Concat
+  - Inputs: ['/entropy_bottleneck/Unsqueeze_output_0', '/entropy_bottleneck/Unsqueeze_1_output_0', '/entropy_bottleneck/Unsqueeze_2_output_0']
+  - Outputs: ['/entropy_bottleneck/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/entropy_bottleneck/Transpose_output_0', '/entropy_bottleneck/Concat_output_0']
+  - Outputs: ['/entropy_bottleneck/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /entropy_bottleneck/Constant_5
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_5_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.1/beta_reparam/Constant_output_0', '/entropy_bottleneck/Constant_5_output_0']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_3_output_0']
+
+Node Name: /entropy_bottleneck/Constant_6
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_6_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_4
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', '/entropy_bottleneck/Constant_6_output_0']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_4_output_0']
+
+Node Name: /entropy_bottleneck/Constant_7
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_7_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_5
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.1/beta_reparam/Constant_output_0', '/entropy_bottleneck/Constant_7_output_0']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_5_output_0']
+
+Node Name: /entropy_bottleneck/Constant_8
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_8_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_6
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', '/entropy_bottleneck/Constant_8_output_0']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_6_output_0']
+
+Node Name: /entropy_bottleneck/Slice
+  - Operator Type: Slice
+  - Inputs: ['entropy_bottleneck.quantiles', '/entropy_bottleneck/Unsqueeze_4_output_0', '/entropy_bottleneck/Unsqueeze_5_output_0', '/entropy_bottleneck/Unsqueeze_3_output_0', '/entropy_bottleneck/Unsqueeze_6_output_0']
+  - Outputs: ['/entropy_bottleneck/Slice_output_0']
+
+Node Name: /entropy_bottleneck/Sub
+  - Operator Type: Sub
+  - Inputs: ['/entropy_bottleneck/Reshape_output_0', '/entropy_bottleneck/Slice_output_0']
+  - Outputs: ['/entropy_bottleneck/Sub_output_0']
+
+Node Name: /entropy_bottleneck/Round
+  - Operator Type: Round
+  - Inputs: ['/entropy_bottleneck/Sub_output_0']
+  - Outputs: ['/entropy_bottleneck/Round_output_0']
+
+Node Name: /entropy_bottleneck/Add
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Round_output_0', '/entropy_bottleneck/Slice_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_output_0']
+
+Node Name: /entropy_bottleneck/Constant_9
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_9_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Sub_1
+  - Operator Type: Sub
+  - Inputs: ['/entropy_bottleneck/Add_output_0', '/entropy_bottleneck/Constant_9_output_0']
+  - Outputs: ['/entropy_bottleneck/Sub_1_output_0']
+
+Node Name: /entropy_bottleneck/Softplus
+  - Operator Type: Softplus
+  - Inputs: ['entropy_bottleneck.matrices.0']
+  - Outputs: ['/entropy_bottleneck/Softplus_output_0']
+
+Node Name: /entropy_bottleneck/MatMul
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_output_0', '/entropy_bottleneck/Sub_1_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_output_0']
+
+Node Name: /entropy_bottleneck/Add_1
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_output_0', 'entropy_bottleneck.biases.0']
+  - Outputs: ['/entropy_bottleneck/Add_1_output_0']
+
+Node Name: /entropy_bottleneck/Tanh
+  - Operator Type: Tanh
+  - Inputs: ['entropy_bottleneck.factors.0']
+  - Outputs: ['/entropy_bottleneck/Tanh_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_1
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_1_output_0']
+
+Node Name: /entropy_bottleneck/Mul
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_output_0', '/entropy_bottleneck/Tanh_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_output_0']
+
+Node Name: /entropy_bottleneck/Add_2
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_1_output_0', '/entropy_bottleneck/Mul_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_2_output_0']
+
+Node Name: /entropy_bottleneck/Softplus_1
+  - Operator Type: Softplus
+  - Inputs: ['entropy_bottleneck.matrices.1']
+  - Outputs: ['/entropy_bottleneck/Softplus_1_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_1
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_1_output_0', '/entropy_bottleneck/Add_2_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_1_output_0']
+
+Node Name: /entropy_bottleneck/Add_3
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_1_output_0', 'entropy_bottleneck.biases.1']
+  - Outputs: ['/entropy_bottleneck/Add_3_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_2
+  - Operator Type: Tanh
+  - Inputs: ['entropy_bottleneck.factors.1']
+  - Outputs: ['/entropy_bottleneck/Tanh_2_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_3
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_3_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_3_output_0']
+
+Node Name: /entropy_bottleneck/Mul_1
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_2_output_0', '/entropy_bottleneck/Tanh_3_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_1_output_0']
+
+Node Name: /entropy_bottleneck/Add_4
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_3_output_0', '/entropy_bottleneck/Mul_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_4_output_0']
+
+Node Name: /entropy_bottleneck/Softplus_2
+  - Operator Type: Softplus
+  - Inputs: ['entropy_bottleneck.matrices.2']
+  - Outputs: ['/entropy_bottleneck/Softplus_2_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_2
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_2_output_0', '/entropy_bottleneck/Add_4_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_2_output_0']
+
+Node Name: /entropy_bottleneck/Add_5
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_2_output_0', 'entropy_bottleneck.biases.2']
+  - Outputs: ['/entropy_bottleneck/Add_5_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_4
+  - Operator Type: Tanh
+  - Inputs: ['entropy_bottleneck.factors.2']
+  - Outputs: ['/entropy_bottleneck/Tanh_4_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_5
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_5_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_5_output_0']
+
+Node Name: /entropy_bottleneck/Mul_2
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_4_output_0', '/entropy_bottleneck/Tanh_5_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_2_output_0']
+
+Node Name: /entropy_bottleneck/Add_6
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_5_output_0', '/entropy_bottleneck/Mul_2_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_6_output_0']
+
+Node Name: /entropy_bottleneck/Softplus_3
+  - Operator Type: Softplus
+  - Inputs: ['entropy_bottleneck.matrices.3']
+  - Outputs: ['/entropy_bottleneck/Softplus_3_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_3
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_3_output_0', '/entropy_bottleneck/Add_6_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_3_output_0']
+
+Node Name: /entropy_bottleneck/Add_7
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_3_output_0', 'entropy_bottleneck.biases.3']
+  - Outputs: ['/entropy_bottleneck/Add_7_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_6
+  - Operator Type: Tanh
+  - Inputs: ['entropy_bottleneck.factors.3']
+  - Outputs: ['/entropy_bottleneck/Tanh_6_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_7
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_7_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_7_output_0']
+
+Node Name: /entropy_bottleneck/Mul_3
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_6_output_0', '/entropy_bottleneck/Tanh_7_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_3_output_0']
+
+Node Name: /entropy_bottleneck/Add_8
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_7_output_0', '/entropy_bottleneck/Mul_3_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_8_output_0']
+
+Node Name: /entropy_bottleneck/Softplus_4
+  - Operator Type: Softplus
+  - Inputs: ['entropy_bottleneck.matrices.4']
+  - Outputs: ['/entropy_bottleneck/Softplus_4_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_4
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_4_output_0', '/entropy_bottleneck/Add_8_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_4_output_0']
+
+Node Name: /entropy_bottleneck/Add_9
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_4_output_0', 'entropy_bottleneck.biases.4']
+  - Outputs: ['/entropy_bottleneck/Add_9_output_0']
+
+Node Name: /entropy_bottleneck/Constant_10
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_10_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Add_10
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_output_0', '/entropy_bottleneck/Constant_10_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_10_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_5
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_output_0', '/entropy_bottleneck/Add_10_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_5_output_0']
+
+Node Name: /entropy_bottleneck/Add_11
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_5_output_0', 'entropy_bottleneck.biases.0']
+  - Outputs: ['/entropy_bottleneck/Add_11_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_8
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_11_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_8_output_0']
+
+Node Name: /entropy_bottleneck/Mul_4
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_output_0', '/entropy_bottleneck/Tanh_8_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_4_output_0']
+
+Node Name: /entropy_bottleneck/Add_12
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_11_output_0', '/entropy_bottleneck/Mul_4_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_12_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_6
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_1_output_0', '/entropy_bottleneck/Add_12_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_6_output_0']
+
+Node Name: /entropy_bottleneck/Add_13
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_6_output_0', 'entropy_bottleneck.biases.1']
+  - Outputs: ['/entropy_bottleneck/Add_13_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_9
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_13_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_9_output_0']
+
+Node Name: /entropy_bottleneck/Mul_5
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_2_output_0', '/entropy_bottleneck/Tanh_9_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_5_output_0']
+
+Node Name: /entropy_bottleneck/Add_14
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_13_output_0', '/entropy_bottleneck/Mul_5_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_14_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_7
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_2_output_0', '/entropy_bottleneck/Add_14_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_7_output_0']
+
+Node Name: /entropy_bottleneck/Add_15
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_7_output_0', 'entropy_bottleneck.biases.2']
+  - Outputs: ['/entropy_bottleneck/Add_15_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_10
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_15_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_10_output_0']
+
+Node Name: /entropy_bottleneck/Mul_6
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_4_output_0', '/entropy_bottleneck/Tanh_10_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_6_output_0']
+
+Node Name: /entropy_bottleneck/Add_16
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_15_output_0', '/entropy_bottleneck/Mul_6_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_16_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_8
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_3_output_0', '/entropy_bottleneck/Add_16_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_8_output_0']
+
+Node Name: /entropy_bottleneck/Add_17
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_8_output_0', 'entropy_bottleneck.biases.3']
+  - Outputs: ['/entropy_bottleneck/Add_17_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_11
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_17_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_11_output_0']
+
+Node Name: /entropy_bottleneck/Mul_7
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_6_output_0', '/entropy_bottleneck/Tanh_11_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_7_output_0']
+
+Node Name: /entropy_bottleneck/Add_18
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_17_output_0', '/entropy_bottleneck/Mul_7_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_18_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_9
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_4_output_0', '/entropy_bottleneck/Add_18_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_9_output_0']
+
+Node Name: /entropy_bottleneck/Add_19
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_9_output_0', 'entropy_bottleneck.biases.4']
+  - Outputs: ['/entropy_bottleneck/Add_19_output_0']
+
+Node Name: /entropy_bottleneck/Sigmoid
+  - Operator Type: Sigmoid
+  - Inputs: ['/entropy_bottleneck/Add_19_output_0']
+  - Outputs: ['/entropy_bottleneck/Sigmoid_output_0']
+
+Node Name: /entropy_bottleneck/Sigmoid_1
+  - Operator Type: Sigmoid
+  - Inputs: ['/entropy_bottleneck/Add_9_output_0']
+  - Outputs: ['/entropy_bottleneck/Sigmoid_1_output_0']
+
+Node Name: /entropy_bottleneck/Sub_2
+  - Operator Type: Sub
+  - Inputs: ['/entropy_bottleneck/Sigmoid_output_0', '/entropy_bottleneck/Sigmoid_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Sub_2_output_0']
+
+Node Name: /entropy_bottleneck/likelihood_lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['/entropy_bottleneck/Sub_2_output_0', 'entropy_bottleneck.likelihood_lower_bound.bound']
+  - Outputs: ['/entropy_bottleneck/likelihood_lower_bound/Max_output_0']
+
+Node Name: Constant_281
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_258']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_7
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_output_0', 'onnx::Unsqueeze_258']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_7_output_0']
+
+Node Name: Constant_283
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_260']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_8
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_1_output_0', 'onnx::Unsqueeze_260']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_8_output_0']
+
+Node Name: Constant_285
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_262']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_9
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_2_output_0', 'onnx::Unsqueeze_262']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_9_output_0']
+
+Node Name: Constant_287
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_264']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_10
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_3_output_0', 'onnx::Unsqueeze_264']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_10_output_0']
+
+Node Name: /entropy_bottleneck/Concat_1
+  - Operator Type: Concat
+  - Inputs: ['/entropy_bottleneck/Unsqueeze_7_output_0', '/entropy_bottleneck/Unsqueeze_8_output_0', '/entropy_bottleneck/Unsqueeze_9_output_0', '/entropy_bottleneck/Unsqueeze_10_output_0']
+  - Outputs: ['/entropy_bottleneck/Concat_1_output_0']
+  - Attribute Name: axis
+
+Node Name: Constant_290
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_267']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_11
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_output_0', 'onnx::Unsqueeze_267']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_11_output_0']
+
+Node Name: Constant_292
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_269']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_12
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_1_output_0', 'onnx::Unsqueeze_269']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_12_output_0']
+
+Node Name: Constant_294
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_271']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_13
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_2_output_0', 'onnx::Unsqueeze_271']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_13_output_0']
+
+Node Name: Constant_296
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_273']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_14
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_3_output_0', 'onnx::Unsqueeze_273']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_14_output_0']
+
+Node Name: /entropy_bottleneck/Concat_2
+  - Operator Type: Concat
+  - Inputs: ['/entropy_bottleneck/Unsqueeze_11_output_0', '/entropy_bottleneck/Unsqueeze_12_output_0', '/entropy_bottleneck/Unsqueeze_13_output_0', '/entropy_bottleneck/Unsqueeze_14_output_0']
+  - Outputs: ['/entropy_bottleneck/Concat_2_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Reshape_1
+  - Operator Type: Reshape
+  - Inputs: ['/entropy_bottleneck/Add_output_0', '/entropy_bottleneck/Concat_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Reshape_1_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /entropy_bottleneck/Transpose_1
+  - Operator Type: Transpose
+  - Inputs: ['/entropy_bottleneck/Reshape_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Transpose_1_output_0']
+  - Attribute Name: perm
+
+Node Name: /entropy_bottleneck/Reshape_2
+  - Operator Type: Reshape
+  - Inputs: ['/entropy_bottleneck/likelihood_lower_bound/Max_output_0', '/entropy_bottleneck/Concat_2_output_0']
+  - Outputs: ['/entropy_bottleneck/Reshape_2_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /entropy_bottleneck/Transpose_2
+  - Operator Type: Transpose
+  - Inputs: ['/entropy_bottleneck/Reshape_2_output_0']
+  - Outputs: ['279']
+  - Attribute Name: perm
+
+Node Name: /g_s/g_s.0/ConvTranspose
+  - Operator Type: ConvTranspose
+  - Inputs: ['/entropy_bottleneck/Transpose_1_output_0', 'g_s.0.weight', 'g_s.0.bias']
+  - Outputs: ['/g_s/g_s.0/ConvTranspose_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: output_padding
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.1/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_s/g_s.0/ConvTranspose_output_0']
+  - Outputs: ['/g_s/g_s.1/Shape_output_0']
+
+Node Name: /g_s/g_s.1/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.1/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_s/g_s.1/Shape_output_0', '/g_s/g_s.1/Constant_output_0']
+  - Outputs: ['/g_s/g_s.1/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.1/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.1.beta', 'g_s.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.1/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.1/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.1/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.1/beta_reparam/lower_bound/Max_output_0', '/g_s/g_s.1/beta_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.1/beta_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.1/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.1/beta_reparam/Pow_output_0', 'g_s.1.beta_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.1/beta_reparam/Sub_output_0']
+
+Node Name: /g_s/g_s.1/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.1.gamma', 'g_s.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.1/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.1/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.1/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.1/gamma_reparam/lower_bound/Max_output_0', '/g_s/g_s.1/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.1/gamma_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.1/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.1/gamma_reparam/Pow_output_0', 'g_s.1.gamma_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.1/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_315
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_292']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.1/Gather_output_0', 'onnx::Unsqueeze_292']
+  - Outputs: ['/g_s/g_s.1/Unsqueeze_output_0']
+
+Node Name: Constant_317
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_294']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.1/Gather_output_0', 'onnx::Unsqueeze_294']
+  - Outputs: ['/g_s/g_s.1/Unsqueeze_1_output_0']
+
+Node Name: Constant_319
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_296']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_296']
+  - Outputs: ['/g_s/g_s.1/Unsqueeze_2_output_0']
+
+Node Name: Constant_321
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_298']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_298']
+  - Outputs: ['/g_s/g_s.1/Unsqueeze_3_output_0']
+
+Node Name: /g_s/g_s.1/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_s/g_s.1/Unsqueeze_output_0', '/g_s/g_s.1/Unsqueeze_1_output_0', '/g_s/g_s.1/Unsqueeze_2_output_0', '/g_s/g_s.1/Unsqueeze_3_output_0']
+  - Outputs: ['/g_s/g_s.1/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.1/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_s/g_s.1/gamma_reparam/Sub_output_0', '/g_s/g_s.1/Concat_output_0']
+  - Outputs: ['/g_s/g_s.1/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_s/g_s.1/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.1/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.0/ConvTranspose_output_0', '/g_s/g_s.1/Constant_1_output_0']
+  - Outputs: ['/g_s/g_s.1/Pow_output_0']
+
+Node Name: /g_s/g_s.1/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_s/g_s.1/Pow_output_0', '/g_s/g_s.1/Reshape_output_0', '/g_s/g_s.1/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_s/g_s.1/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.1/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_s/g_s.1/Conv_output_0']
+  - Outputs: ['/g_s/g_s.1/Sqrt_output_0']
+
+Node Name: /g_s/g_s.1/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_s/g_s.0/ConvTranspose_output_0', '/g_s/g_s.1/Sqrt_output_0']
+  - Outputs: ['/g_s/g_s.1/Mul_output_0']
+
+Node Name: /g_s/g_s.2/ConvTranspose
+  - Operator Type: ConvTranspose
+  - Inputs: ['/g_s/g_s.1/Mul_output_0', 'g_s.2.weight', 'g_s.2.bias']
+  - Outputs: ['/g_s/g_s.2/ConvTranspose_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: output_padding
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.3/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_s/g_s.2/ConvTranspose_output_0']
+  - Outputs: ['/g_s/g_s.3/Shape_output_0']
+
+Node Name: /g_s/g_s.3/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.3/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_s/g_s.3/Shape_output_0', '/g_s/g_s.3/Constant_output_0']
+  - Outputs: ['/g_s/g_s.3/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.3/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.3.beta', 'g_s.3.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.3/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.3/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.3/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.3/beta_reparam/lower_bound/Max_output_0', '/g_s/g_s.3/beta_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.3/beta_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.3/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.3/beta_reparam/Pow_output_0', 'g_s.3.beta_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.3/beta_reparam/Sub_output_0']
+
+Node Name: /g_s/g_s.3/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.3.gamma', 'g_s.3.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.3/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.3/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.3/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.3/gamma_reparam/lower_bound/Max_output_0', '/g_s/g_s.3/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.3/gamma_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.3/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.3/gamma_reparam/Pow_output_0', 'g_s.3.gamma_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.3/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_342
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_319']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.3/Gather_output_0', 'onnx::Unsqueeze_319']
+  - Outputs: ['/g_s/g_s.3/Unsqueeze_output_0']
+
+Node Name: Constant_344
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_321']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.3/Gather_output_0', 'onnx::Unsqueeze_321']
+  - Outputs: ['/g_s/g_s.3/Unsqueeze_1_output_0']
+
+Node Name: Constant_346
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_323']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_323']
+  - Outputs: ['/g_s/g_s.3/Unsqueeze_2_output_0']
+
+Node Name: Constant_348
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_325']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_325']
+  - Outputs: ['/g_s/g_s.3/Unsqueeze_3_output_0']
+
+Node Name: /g_s/g_s.3/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_s/g_s.3/Unsqueeze_output_0', '/g_s/g_s.3/Unsqueeze_1_output_0', '/g_s/g_s.3/Unsqueeze_2_output_0', '/g_s/g_s.3/Unsqueeze_3_output_0']
+  - Outputs: ['/g_s/g_s.3/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.3/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_s/g_s.3/gamma_reparam/Sub_output_0', '/g_s/g_s.3/Concat_output_0']
+  - Outputs: ['/g_s/g_s.3/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_s/g_s.3/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.3/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.2/ConvTranspose_output_0', '/g_s/g_s.3/Constant_1_output_0']
+  - Outputs: ['/g_s/g_s.3/Pow_output_0']
+
+Node Name: /g_s/g_s.3/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_s/g_s.3/Pow_output_0', '/g_s/g_s.3/Reshape_output_0', '/g_s/g_s.3/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_s/g_s.3/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.3/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_s/g_s.3/Conv_output_0']
+  - Outputs: ['/g_s/g_s.3/Sqrt_output_0']
+
+Node Name: /g_s/g_s.3/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_s/g_s.2/ConvTranspose_output_0', '/g_s/g_s.3/Sqrt_output_0']
+  - Outputs: ['/g_s/g_s.3/Mul_output_0']
+
+Node Name: /g_s/g_s.4/ConvTranspose
+  - Operator Type: ConvTranspose
+  - Inputs: ['/g_s/g_s.3/Mul_output_0', 'g_s.4.weight', 'g_s.4.bias']
+  - Outputs: ['/g_s/g_s.4/ConvTranspose_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: output_padding
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.5/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_s/g_s.4/ConvTranspose_output_0']
+  - Outputs: ['/g_s/g_s.5/Shape_output_0']
+
+Node Name: /g_s/g_s.5/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.5/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_s/g_s.5/Shape_output_0', '/g_s/g_s.5/Constant_output_0']
+  - Outputs: ['/g_s/g_s.5/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.5/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.5.beta', 'g_s.5.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.5/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.5/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.5/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.5/beta_reparam/lower_bound/Max_output_0', '/g_s/g_s.5/beta_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.5/beta_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.5/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.5/beta_reparam/Pow_output_0', 'g_s.5.beta_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.5/beta_reparam/Sub_output_0']
+
+Node Name: /g_s/g_s.5/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.5.gamma', 'g_s.5.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.5/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.5/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.5/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.5/gamma_reparam/lower_bound/Max_output_0', '/g_s/g_s.5/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.5/gamma_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.5/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.5/gamma_reparam/Pow_output_0', 'g_s.5.gamma_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.5/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_369
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_346']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.5/Gather_output_0', 'onnx::Unsqueeze_346']
+  - Outputs: ['/g_s/g_s.5/Unsqueeze_output_0']
+
+Node Name: Constant_371
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_348']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.5/Gather_output_0', 'onnx::Unsqueeze_348']
+  - Outputs: ['/g_s/g_s.5/Unsqueeze_1_output_0']
+
+Node Name: Constant_373
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_350']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_350']
+  - Outputs: ['/g_s/g_s.5/Unsqueeze_2_output_0']
+
+Node Name: Constant_375
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_352']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_352']
+  - Outputs: ['/g_s/g_s.5/Unsqueeze_3_output_0']
+
+Node Name: /g_s/g_s.5/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_s/g_s.5/Unsqueeze_output_0', '/g_s/g_s.5/Unsqueeze_1_output_0', '/g_s/g_s.5/Unsqueeze_2_output_0', '/g_s/g_s.5/Unsqueeze_3_output_0']
+  - Outputs: ['/g_s/g_s.5/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.5/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_s/g_s.5/gamma_reparam/Sub_output_0', '/g_s/g_s.5/Concat_output_0']
+  - Outputs: ['/g_s/g_s.5/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_s/g_s.5/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.5/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.4/ConvTranspose_output_0', '/g_s/g_s.5/Constant_1_output_0']
+  - Outputs: ['/g_s/g_s.5/Pow_output_0']
+
+Node Name: /g_s/g_s.5/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_s/g_s.5/Pow_output_0', '/g_s/g_s.5/Reshape_output_0', '/g_s/g_s.5/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_s/g_s.5/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.5/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_s/g_s.5/Conv_output_0']
+  - Outputs: ['/g_s/g_s.5/Sqrt_output_0']
+
+Node Name: /g_s/g_s.5/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_s/g_s.4/ConvTranspose_output_0', '/g_s/g_s.5/Sqrt_output_0']
+  - Outputs: ['/g_s/g_s.5/Mul_output_0']
+
+Node Name: /g_s/g_s.6/ConvTranspose
+  - Operator Type: ConvTranspose
+  - Inputs: ['/g_s/g_s.5/Mul_output_0', 'g_s.6.weight', 'g_s.6.bias']
+  - Outputs: ['output']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: output_padding
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Model Weights (Initializers):
+
+Initializer Name: entropy_bottleneck.quantiles
+  - Shape: (192, 1, 3)
+  - Data Type: 1
+  - Values (First 5): [-12.184065     0.01383079  12.221952    -5.4322143    0.144852  ]
+
+Initializer Name: entropy_bottleneck.likelihood_lower_bound.bound
+  - Shape: (1,)
+  - Data Type: 1
+  - Values (First 5): [1.e-09]
+
+Initializer Name: entropy_bottleneck.matrices.0
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [-8.563933  -6.857641   3.4651735 11.474104  11.508286 ]
+
+Initializer Name: entropy_bottleneck.matrices.1
+  - Shape: (192, 3, 3)
+  - Data Type: 1
+  - Values (First 5): [-2.8518636  -5.2396607   0.07452361 -1.0823522  -4.8739023 ]
+
+Initializer Name: entropy_bottleneck.matrices.2
+  - Shape: (192, 3, 3)
+  - Data Type: 1
+  - Values (First 5): [-1.166709  -0.4156325 -1.1663681 -1.1724225 -0.4135137]
+
+Initializer Name: entropy_bottleneck.matrices.3
+  - Shape: (192, 3, 3)
+  - Data Type: 1
+  - Values (First 5): [-1.6072756 -1.6822491 -1.6948451 -1.5958402 -1.6730739]
+
+Initializer Name: entropy_bottleneck.matrices.4
+  - Shape: (192, 1, 3)
+  - Data Type: 1
+  - Values (First 5): [-1.4549096  -1.3423367  -1.4691252   0.07497398 -1.1194615 ]
+
+Initializer Name: entropy_bottleneck.biases.0
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [-0.16343234 -0.02980042 -0.04211974 -1.664318   -1.6693614 ]
+
+Initializer Name: entropy_bottleneck.biases.1
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [ 0.0160158   0.07700579  0.01580812 -0.00112594 -0.00112499]
+
+Initializer Name: entropy_bottleneck.biases.2
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [-0.00548133 -0.00545567 -0.0054614  -0.0006462  -0.00064462]
+
+Initializer Name: entropy_bottleneck.biases.3
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [-0.00171544 -0.00167039 -0.00173094 -0.00030331 -0.00030643]
+
+Initializer Name: entropy_bottleneck.biases.4
+  - Shape: (192, 1, 1)
+  - Data Type: 1
+  - Values (First 5): [-0.00584367  0.00195578  0.00842932  0.42499712  0.06387255]
+
+Initializer Name: entropy_bottleneck.factors.0
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [6.711729  6.7129855 7.436957  7.4642696 7.7046375]
+
+Initializer Name: entropy_bottleneck.factors.1
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [6.780925 7.433126 6.780474 8.001123 8.038164]
+
+Initializer Name: entropy_bottleneck.factors.2
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [7.1764283 7.1408195 7.135499  8.000025  8.13904  ]
+
+Initializer Name: entropy_bottleneck.factors.3
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [7.0937076 7.1910505 7.0699344 8.461617  8.045572 ]
+
+Initializer Name: g_a.0.weight
+  - Shape: (128, 3, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [-0.07865194 -0.10003603  0.03959137  0.07459416  0.08557799]
+
+Initializer Name: g_a.0.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [-3.9675389e-03  4.8516275e-04  5.9824968e-03  9.8098472e-02
+  8.7806213e-05]
+
+Initializer Name: g_a.1.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [1.9111714  1.6808202  2.2257028  2.2772543  0.69374776]
+
+Initializer Name: g_a.1.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [4.3871620e-01 3.8164449e-06 3.8552371e-06 1.7006288e+00 4.4793878e-06]
+
+Initializer Name: g_a.1.beta_reparam.pedestal
+  - Shape: (1,)
+  - Data Type: 1
+  - Values (First 5): [1.4551915e-11]
+
+Initializer Name: g_a.1.beta_reparam.lower_bound.bound
+  - Shape: (1,)
+  - Data Type: 1
+  - Values (First 5): [0.00100001]
+
+Initializer Name: g_a.1.gamma_reparam.lower_bound.bound
+  - Shape: (1,)
+  - Data Type: 1
+  - Values (First 5): [3.8146973e-06]
+
+Initializer Name: g_a.2.weight
+  - Shape: (128, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [0.08982614 0.28083724 0.26143426 0.08491866 0.00469891]
+
+Initializer Name: g_a.2.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [-0.04282075 -0.044732    0.14836602 -0.09986626  0.00893299]
+
+Initializer Name: g_a.3.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [2.461648  2.3033736 2.9596076 1.9475571 2.4777205]
+
+Initializer Name: g_a.3.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [3.1115959e+00 3.8234584e-06 6.9562632e-01 6.6558325e-01 5.5596578e-01]
+
+Initializer Name: g_a.4.weight
+  - Shape: (128, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [ 0.0362732  -0.02791664 -0.12109091  0.08208698  0.07516854]
+
+Initializer Name: g_a.4.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [ 0.01855466 -0.02497042  0.03588101 -0.00427864  0.02563638]
+
+Initializer Name: g_a.5.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [ 4.648724   7.6060185 16.610283   6.4774203  5.1991844]
+
+Initializer Name: g_a.5.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [6.1976852e+00 5.2382364e+00 3.8162138e-06 3.8197686e-06 3.8139426e-06]
+
+Initializer Name: g_a.6.weight
+  - Shape: (192, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [-0.00016194  0.0027293  -0.01560607  0.01229301 -0.01033488]
+
+Initializer Name: g_a.6.bias
+  - Shape: (192,)
+  - Data Type: 1
+  - Values (First 5): [-0.01471509  0.16287868  0.0135164   0.35206303 -0.00673614]
+
+Initializer Name: g_s.0.weight
+  - Shape: (192, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [0.00031358 0.00257681 0.00023055 0.00176603 0.00650026]
+
+Initializer Name: g_s.0.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [-1.483314    0.15874507  0.02634417  0.10163125  0.17998685]
+
+Initializer Name: g_s.1.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [0.0680718  0.08044273 0.00620792 0.00100359 0.00098363]
+
+Initializer Name: g_s.1.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [-1.1465772e-04  1.5943003e-03  2.2915681e-03  3.7352643e-06
+  3.4396690e-03]
+
+Initializer Name: g_s.2.weight
+  - Shape: (128, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [-0.00023584 -0.06574     0.0404558  -0.08013149 -0.02588295]
+
+Initializer Name: g_s.2.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [ 0.00174115 -0.07770594 -0.00275888  0.12717173 -0.06626157]
+
+Initializer Name: g_s.3.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [0.00098406 0.00099866 0.00101633 0.00099603 0.03533137]
+
+Initializer Name: g_s.3.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [-3.2081556e-05  1.9248659e-02  1.7427251e-02  2.0421153e-02
+  3.7699238e-06]
+
+Initializer Name: g_s.4.weight
+  - Shape: (128, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [ 0.01023421 -0.03076436 -0.00134934 -0.1530759   0.03755372]
+
+Initializer Name: g_s.4.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [ 0.00432915  0.03646551  0.00184807  0.00086523 -0.01925813]
+
+Initializer Name: g_s.5.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [0.00100927 0.00106454 0.00104884 0.01495001 0.02086574]
+
+Initializer Name: g_s.5.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [5.0499284e-01 3.1903413e-01 2.9103364e-06 1.9762224e-01 6.2213197e-02]
+
+Initializer Name: g_s.6.weight
+  - Shape: (128, 3, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [-0.0109961  -0.02182352  0.00418911  0.07170995  0.06487046]
+
+Initializer Name: g_s.6.bias
+  - Shape: (3,)
+  - Data Type: 1
+  - Values (First 5): [0.23376888 0.21687979 0.20348668]
+
+Model information extraction completed.
+cuda
+Model exists
+The model is exported to the ONNX version
+shape of x is: (1, 3, 1232, 1640)
+the Model: None  is exported
+Model Information:
+IR Version: 7
+Producer Name: pytorch
+Producer Version: 2.2.0
+Opset Import: [version: 14
+]
+Model Domain: 
+Model Doc String: 
+
+Graph Information:
+Graph Name: main_graph
+Graph Inputs: ['input']
+Graph Outputs: ['output', '279']
+Number of Nodes: 310
+
+Model Layers (Nodes):
+
+Node Name: Identity_75
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['g_s.5.gamma_reparam.lower_bound.bound']
+
+Node Name: Identity_76
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.5.gamma_reparam.pedestal']
+
+Node Name: Identity_77
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['g_s.5.beta_reparam.lower_bound.bound']
+
+Node Name: Identity_78
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.5.beta_reparam.pedestal']
+
+Node Name: Identity_79
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['g_s.3.gamma_reparam.lower_bound.bound']
+
+Node Name: Identity_80
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.3.gamma_reparam.pedestal']
+
+Node Name: Identity_81
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['g_s.3.beta_reparam.lower_bound.bound']
+
+Node Name: Identity_82
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.3.beta_reparam.pedestal']
+
+Node Name: Identity_83
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['g_s.1.gamma_reparam.lower_bound.bound']
+
+Node Name: Identity_84
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.1.gamma_reparam.pedestal']
+
+Node Name: Identity_85
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['g_s.1.beta_reparam.lower_bound.bound']
+
+Node Name: Identity_86
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_s.1.beta_reparam.pedestal']
+
+Node Name: Identity_87
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['g_a.5.gamma_reparam.lower_bound.bound']
+
+Node Name: Identity_88
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_a.5.gamma_reparam.pedestal']
+
+Node Name: Identity_89
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['g_a.5.beta_reparam.lower_bound.bound']
+
+Node Name: Identity_90
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_a.5.beta_reparam.pedestal']
+
+Node Name: Identity_91
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['g_a.3.gamma_reparam.lower_bound.bound']
+
+Node Name: Identity_92
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_a.3.gamma_reparam.pedestal']
+
+Node Name: Identity_93
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['g_a.3.beta_reparam.lower_bound.bound']
+
+Node Name: Identity_94
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_a.3.beta_reparam.pedestal']
+
+Node Name: Identity_95
+  - Operator Type: Identity
+  - Inputs: ['g_a.1.beta_reparam.pedestal']
+  - Outputs: ['g_a.1.gamma_reparam.pedestal']
+
+Node Name: /g_a/g_a.0/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.0/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.0/Conv
+  - Operator Type: Conv
+  - Inputs: ['input', 'g_a.0.weight', 'g_a.0.bias']
+  - Outputs: ['/g_a/g_a.0/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.1/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_a/g_a.0/Conv_output_0']
+  - Outputs: ['/g_a/g_a.1/Shape_output_0']
+
+Node Name: /g_a/g_a.1/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_a/g_a.1/Shape_output_0', '/g_a/g_a.1/Constant_output_0']
+  - Outputs: ['/g_a/g_a.1/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.1/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.1.beta', 'g_a.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.1/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.1/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/beta_reparam/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/beta_reparam/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.1/beta_reparam/lower_bound/Max_output_0', '/g_a/g_a.1/beta_reparam/Constant_1_output_0']
+  - Outputs: ['/g_a/g_a.1/beta_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.1/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.1/beta_reparam/Pow_output_0', 'g_a.1.beta_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.1/beta_reparam/Sub_output_0']
+
+Node Name: /g_a/g_a.1/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.1.gamma', 'g_a.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.1/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.1/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.1/gamma_reparam/lower_bound/Max_output_0', '/g_a/g_a.1/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_a/g_a.1/gamma_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.1/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.1/gamma_reparam/Pow_output_0', 'g_a.1.gamma_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.1/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_110
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_87']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.1/Gather_output_0', 'onnx::Unsqueeze_87']
+  - Outputs: ['/g_a/g_a.1/Unsqueeze_output_0']
+
+Node Name: Constant_112
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_89']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.1/Gather_output_0', 'onnx::Unsqueeze_89']
+  - Outputs: ['/g_a/g_a.1/Unsqueeze_1_output_0']
+
+Node Name: Constant_114
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_91']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_91']
+  - Outputs: ['/g_a/g_a.1/Unsqueeze_2_output_0']
+
+Node Name: Constant_116
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_93']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_93']
+  - Outputs: ['/g_a/g_a.1/Unsqueeze_3_output_0']
+
+Node Name: /g_a/g_a.1/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_a/g_a.1/Unsqueeze_output_0', '/g_a/g_a.1/Unsqueeze_1_output_0', '/g_a/g_a.1/Unsqueeze_2_output_0', '/g_a/g_a.1/Unsqueeze_3_output_0']
+  - Outputs: ['/g_a/g_a.1/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.1/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_a/g_a.1/gamma_reparam/Sub_output_0', '/g_a/g_a.1/Concat_output_0']
+  - Outputs: ['/g_a/g_a.1/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_a/g_a.1/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.0/Conv_output_0', '/g_a/g_a.1/Constant_1_output_0']
+  - Outputs: ['/g_a/g_a.1/Pow_output_0']
+
+Node Name: /g_a/g_a.1/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.1/Pow_output_0', '/g_a/g_a.1/Reshape_output_0', '/g_a/g_a.1/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_a/g_a.1/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.1/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_a/g_a.1/Conv_output_0']
+  - Outputs: ['/g_a/g_a.1/Sqrt_output_0']
+
+Node Name: /g_a/g_a.1/Constant_2
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.1/Constant_2_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.1/Div
+  - Operator Type: Div
+  - Inputs: ['/g_a/g_a.1/Constant_2_output_0', '/g_a/g_a.1/Sqrt_output_0']
+  - Outputs: ['/g_a/g_a.1/Div_output_0']
+
+Node Name: /g_a/g_a.1/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_a/g_a.0/Conv_output_0', '/g_a/g_a.1/Div_output_0']
+  - Outputs: ['/g_a/g_a.1/Mul_output_0']
+
+Node Name: /g_a/g_a.2/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.1/Mul_output_0', 'g_a.2.weight', 'g_a.2.bias']
+  - Outputs: ['/g_a/g_a.2/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.3/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_a/g_a.2/Conv_output_0']
+  - Outputs: ['/g_a/g_a.3/Shape_output_0']
+
+Node Name: /g_a/g_a.3/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.3/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_a/g_a.3/Shape_output_0', '/g_a/g_a.3/Constant_output_0']
+  - Outputs: ['/g_a/g_a.3/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.3/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.3.beta', 'g_a.3.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.3/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.3/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.3/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.3/beta_reparam/lower_bound/Max_output_0', '/g_a/g_a.3/beta_reparam/Constant_output_0']
+  - Outputs: ['/g_a/g_a.3/beta_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.3/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.3/beta_reparam/Pow_output_0', 'g_a.3.beta_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.3/beta_reparam/Sub_output_0']
+
+Node Name: /g_a/g_a.3/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.3.gamma', 'g_a.3.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.3/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.3/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.3/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.3/gamma_reparam/lower_bound/Max_output_0', '/g_a/g_a.3/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_a/g_a.3/gamma_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.3/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.3/gamma_reparam/Pow_output_0', 'g_a.3.gamma_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.3/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_139
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_116']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.3/Gather_output_0', 'onnx::Unsqueeze_116']
+  - Outputs: ['/g_a/g_a.3/Unsqueeze_output_0']
+
+Node Name: Constant_141
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_118']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.3/Gather_output_0', 'onnx::Unsqueeze_118']
+  - Outputs: ['/g_a/g_a.3/Unsqueeze_1_output_0']
+
+Node Name: Constant_143
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_120']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_120']
+  - Outputs: ['/g_a/g_a.3/Unsqueeze_2_output_0']
+
+Node Name: Constant_145
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_122']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_122']
+  - Outputs: ['/g_a/g_a.3/Unsqueeze_3_output_0']
+
+Node Name: /g_a/g_a.3/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_a/g_a.3/Unsqueeze_output_0', '/g_a/g_a.3/Unsqueeze_1_output_0', '/g_a/g_a.3/Unsqueeze_2_output_0', '/g_a/g_a.3/Unsqueeze_3_output_0']
+  - Outputs: ['/g_a/g_a.3/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.3/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_a/g_a.3/gamma_reparam/Sub_output_0', '/g_a/g_a.3/Concat_output_0']
+  - Outputs: ['/g_a/g_a.3/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_a/g_a.3/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.3/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.2/Conv_output_0', '/g_a/g_a.3/Constant_1_output_0']
+  - Outputs: ['/g_a/g_a.3/Pow_output_0']
+
+Node Name: /g_a/g_a.3/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.3/Pow_output_0', '/g_a/g_a.3/Reshape_output_0', '/g_a/g_a.3/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_a/g_a.3/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.3/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_a/g_a.3/Conv_output_0']
+  - Outputs: ['/g_a/g_a.3/Sqrt_output_0']
+
+Node Name: /g_a/g_a.3/Constant_2
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.3/Constant_2_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.3/Div
+  - Operator Type: Div
+  - Inputs: ['/g_a/g_a.3/Constant_2_output_0', '/g_a/g_a.3/Sqrt_output_0']
+  - Outputs: ['/g_a/g_a.3/Div_output_0']
+
+Node Name: /g_a/g_a.3/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_a/g_a.2/Conv_output_0', '/g_a/g_a.3/Div_output_0']
+  - Outputs: ['/g_a/g_a.3/Mul_output_0']
+
+Node Name: /g_a/g_a.4/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.3/Mul_output_0', 'g_a.4.weight', 'g_a.4.bias']
+  - Outputs: ['/g_a/g_a.4/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.5/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_a/g_a.4/Conv_output_0']
+  - Outputs: ['/g_a/g_a.5/Shape_output_0']
+
+Node Name: /g_a/g_a.5/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.5/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_a/g_a.5/Shape_output_0', '/g_a/g_a.5/Constant_output_0']
+  - Outputs: ['/g_a/g_a.5/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.5/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.5.beta', 'g_a.5.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.5/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.5/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.5/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.5/beta_reparam/lower_bound/Max_output_0', '/g_a/g_a.5/beta_reparam/Constant_output_0']
+  - Outputs: ['/g_a/g_a.5/beta_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.5/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.5/beta_reparam/Pow_output_0', 'g_a.5.beta_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.5/beta_reparam/Sub_output_0']
+
+Node Name: /g_a/g_a.5/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_a.5.gamma', 'g_a.5.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_a/g_a.5/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_a/g_a.5/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.5/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.5/gamma_reparam/lower_bound/Max_output_0', '/g_a/g_a.5/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_a/g_a.5/gamma_reparam/Pow_output_0']
+
+Node Name: /g_a/g_a.5/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_a/g_a.5/gamma_reparam/Pow_output_0', 'g_a.5.gamma_reparam.pedestal']
+  - Outputs: ['/g_a/g_a.5/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_168
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_145']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.5/Gather_output_0', 'onnx::Unsqueeze_145']
+  - Outputs: ['/g_a/g_a.5/Unsqueeze_output_0']
+
+Node Name: Constant_170
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_147']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.5/Gather_output_0', 'onnx::Unsqueeze_147']
+  - Outputs: ['/g_a/g_a.5/Unsqueeze_1_output_0']
+
+Node Name: Constant_172
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_149']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_149']
+  - Outputs: ['/g_a/g_a.5/Unsqueeze_2_output_0']
+
+Node Name: Constant_174
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_151']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_151']
+  - Outputs: ['/g_a/g_a.5/Unsqueeze_3_output_0']
+
+Node Name: /g_a/g_a.5/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_a/g_a.5/Unsqueeze_output_0', '/g_a/g_a.5/Unsqueeze_1_output_0', '/g_a/g_a.5/Unsqueeze_2_output_0', '/g_a/g_a.5/Unsqueeze_3_output_0']
+  - Outputs: ['/g_a/g_a.5/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_a/g_a.5/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_a/g_a.5/gamma_reparam/Sub_output_0', '/g_a/g_a.5/Concat_output_0']
+  - Outputs: ['/g_a/g_a.5/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_a/g_a.5/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.5/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_a/g_a.4/Conv_output_0', '/g_a/g_a.5/Constant_1_output_0']
+  - Outputs: ['/g_a/g_a.5/Pow_output_0']
+
+Node Name: /g_a/g_a.5/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.5/Pow_output_0', '/g_a/g_a.5/Reshape_output_0', '/g_a/g_a.5/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_a/g_a.5/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_a/g_a.5/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_a/g_a.5/Conv_output_0']
+  - Outputs: ['/g_a/g_a.5/Sqrt_output_0']
+
+Node Name: /g_a/g_a.5/Constant_2
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_a/g_a.5/Constant_2_output_0']
+  - Attribute Name: value
+
+Node Name: /g_a/g_a.5/Div
+  - Operator Type: Div
+  - Inputs: ['/g_a/g_a.5/Constant_2_output_0', '/g_a/g_a.5/Sqrt_output_0']
+  - Outputs: ['/g_a/g_a.5/Div_output_0']
+
+Node Name: /g_a/g_a.5/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_a/g_a.4/Conv_output_0', '/g_a/g_a.5/Div_output_0']
+  - Outputs: ['/g_a/g_a.5/Mul_output_0']
+
+Node Name: /g_a/g_a.6/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_a/g_a.5/Mul_output_0', 'g_a.6.weight', 'g_a.6.bias']
+  - Outputs: ['/g_a/g_a.6/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /entropy_bottleneck/Transpose
+  - Operator Type: Transpose
+  - Inputs: ['/g_a/g_a.6/Conv_output_0']
+  - Outputs: ['/entropy_bottleneck/Transpose_output_0']
+  - Attribute Name: perm
+
+Node Name: /entropy_bottleneck/Shape
+  - Operator Type: Shape
+  - Inputs: ['/entropy_bottleneck/Transpose_output_0']
+  - Outputs: ['/entropy_bottleneck/Shape_output_0']
+
+Node Name: /entropy_bottleneck/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Gather
+  - Operator Type: Gather
+  - Inputs: ['/entropy_bottleneck/Shape_output_0', '/entropy_bottleneck/Constant_output_0']
+  - Outputs: ['/entropy_bottleneck/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Shape_1
+  - Operator Type: Shape
+  - Inputs: ['/entropy_bottleneck/Transpose_output_0']
+  - Outputs: ['/entropy_bottleneck/Shape_1_output_0']
+
+Node Name: /entropy_bottleneck/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Gather_1
+  - Operator Type: Gather
+  - Inputs: ['/entropy_bottleneck/Shape_1_output_0', '/entropy_bottleneck/Constant_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Gather_1_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Shape_2
+  - Operator Type: Shape
+  - Inputs: ['/entropy_bottleneck/Transpose_output_0']
+  - Outputs: ['/entropy_bottleneck/Shape_2_output_0']
+
+Node Name: /entropy_bottleneck/Constant_2
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_2_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Gather_2
+  - Operator Type: Gather
+  - Inputs: ['/entropy_bottleneck/Shape_2_output_0', '/entropy_bottleneck/Constant_2_output_0']
+  - Outputs: ['/entropy_bottleneck/Gather_2_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Shape_3
+  - Operator Type: Shape
+  - Inputs: ['/entropy_bottleneck/Transpose_output_0']
+  - Outputs: ['/entropy_bottleneck/Shape_3_output_0']
+
+Node Name: /entropy_bottleneck/Constant_3
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_3_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Gather_3
+  - Operator Type: Gather
+  - Inputs: ['/entropy_bottleneck/Shape_3_output_0', '/entropy_bottleneck/Constant_3_output_0']
+  - Outputs: ['/entropy_bottleneck/Gather_3_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Constant_4
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_4_output_0']
+  - Attribute Name: value
+
+Node Name: Constant_200
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_177']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_output_0', 'onnx::Unsqueeze_177']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_output_0']
+
+Node Name: Constant_202
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_179']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_179']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_1_output_0']
+
+Node Name: Constant_204
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_181']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Constant_4_output_0', 'onnx::Unsqueeze_181']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_2_output_0']
+
+Node Name: /entropy_bottleneck/Concat
+  - Operator Type: Concat
+  - Inputs: ['/entropy_bottleneck/Unsqueeze_output_0', '/entropy_bottleneck/Unsqueeze_1_output_0', '/entropy_bottleneck/Unsqueeze_2_output_0']
+  - Outputs: ['/entropy_bottleneck/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/entropy_bottleneck/Transpose_output_0', '/entropy_bottleneck/Concat_output_0']
+  - Outputs: ['/entropy_bottleneck/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /entropy_bottleneck/Constant_5
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_5_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.1/beta_reparam/Constant_output_0', '/entropy_bottleneck/Constant_5_output_0']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_3_output_0']
+
+Node Name: /entropy_bottleneck/Constant_6
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_6_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_4
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', '/entropy_bottleneck/Constant_6_output_0']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_4_output_0']
+
+Node Name: /entropy_bottleneck/Constant_7
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_7_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_5
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.1/beta_reparam/Constant_output_0', '/entropy_bottleneck/Constant_7_output_0']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_5_output_0']
+
+Node Name: /entropy_bottleneck/Constant_8
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_8_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_6
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', '/entropy_bottleneck/Constant_8_output_0']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_6_output_0']
+
+Node Name: /entropy_bottleneck/Slice
+  - Operator Type: Slice
+  - Inputs: ['entropy_bottleneck.quantiles', '/entropy_bottleneck/Unsqueeze_4_output_0', '/entropy_bottleneck/Unsqueeze_5_output_0', '/entropy_bottleneck/Unsqueeze_3_output_0', '/entropy_bottleneck/Unsqueeze_6_output_0']
+  - Outputs: ['/entropy_bottleneck/Slice_output_0']
+
+Node Name: /entropy_bottleneck/Sub
+  - Operator Type: Sub
+  - Inputs: ['/entropy_bottleneck/Reshape_output_0', '/entropy_bottleneck/Slice_output_0']
+  - Outputs: ['/entropy_bottleneck/Sub_output_0']
+
+Node Name: /entropy_bottleneck/Round
+  - Operator Type: Round
+  - Inputs: ['/entropy_bottleneck/Sub_output_0']
+  - Outputs: ['/entropy_bottleneck/Round_output_0']
+
+Node Name: /entropy_bottleneck/Add
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Round_output_0', '/entropy_bottleneck/Slice_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_output_0']
+
+Node Name: /entropy_bottleneck/Constant_9
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_9_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Sub_1
+  - Operator Type: Sub
+  - Inputs: ['/entropy_bottleneck/Add_output_0', '/entropy_bottleneck/Constant_9_output_0']
+  - Outputs: ['/entropy_bottleneck/Sub_1_output_0']
+
+Node Name: /entropy_bottleneck/Softplus
+  - Operator Type: Softplus
+  - Inputs: ['entropy_bottleneck.matrices.0']
+  - Outputs: ['/entropy_bottleneck/Softplus_output_0']
+
+Node Name: /entropy_bottleneck/MatMul
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_output_0', '/entropy_bottleneck/Sub_1_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_output_0']
+
+Node Name: /entropy_bottleneck/Add_1
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_output_0', 'entropy_bottleneck.biases.0']
+  - Outputs: ['/entropy_bottleneck/Add_1_output_0']
+
+Node Name: /entropy_bottleneck/Tanh
+  - Operator Type: Tanh
+  - Inputs: ['entropy_bottleneck.factors.0']
+  - Outputs: ['/entropy_bottleneck/Tanh_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_1
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_1_output_0']
+
+Node Name: /entropy_bottleneck/Mul
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_output_0', '/entropy_bottleneck/Tanh_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_output_0']
+
+Node Name: /entropy_bottleneck/Add_2
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_1_output_0', '/entropy_bottleneck/Mul_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_2_output_0']
+
+Node Name: /entropy_bottleneck/Softplus_1
+  - Operator Type: Softplus
+  - Inputs: ['entropy_bottleneck.matrices.1']
+  - Outputs: ['/entropy_bottleneck/Softplus_1_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_1
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_1_output_0', '/entropy_bottleneck/Add_2_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_1_output_0']
+
+Node Name: /entropy_bottleneck/Add_3
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_1_output_0', 'entropy_bottleneck.biases.1']
+  - Outputs: ['/entropy_bottleneck/Add_3_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_2
+  - Operator Type: Tanh
+  - Inputs: ['entropy_bottleneck.factors.1']
+  - Outputs: ['/entropy_bottleneck/Tanh_2_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_3
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_3_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_3_output_0']
+
+Node Name: /entropy_bottleneck/Mul_1
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_2_output_0', '/entropy_bottleneck/Tanh_3_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_1_output_0']
+
+Node Name: /entropy_bottleneck/Add_4
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_3_output_0', '/entropy_bottleneck/Mul_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_4_output_0']
+
+Node Name: /entropy_bottleneck/Softplus_2
+  - Operator Type: Softplus
+  - Inputs: ['entropy_bottleneck.matrices.2']
+  - Outputs: ['/entropy_bottleneck/Softplus_2_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_2
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_2_output_0', '/entropy_bottleneck/Add_4_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_2_output_0']
+
+Node Name: /entropy_bottleneck/Add_5
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_2_output_0', 'entropy_bottleneck.biases.2']
+  - Outputs: ['/entropy_bottleneck/Add_5_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_4
+  - Operator Type: Tanh
+  - Inputs: ['entropy_bottleneck.factors.2']
+  - Outputs: ['/entropy_bottleneck/Tanh_4_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_5
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_5_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_5_output_0']
+
+Node Name: /entropy_bottleneck/Mul_2
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_4_output_0', '/entropy_bottleneck/Tanh_5_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_2_output_0']
+
+Node Name: /entropy_bottleneck/Add_6
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_5_output_0', '/entropy_bottleneck/Mul_2_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_6_output_0']
+
+Node Name: /entropy_bottleneck/Softplus_3
+  - Operator Type: Softplus
+  - Inputs: ['entropy_bottleneck.matrices.3']
+  - Outputs: ['/entropy_bottleneck/Softplus_3_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_3
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_3_output_0', '/entropy_bottleneck/Add_6_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_3_output_0']
+
+Node Name: /entropy_bottleneck/Add_7
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_3_output_0', 'entropy_bottleneck.biases.3']
+  - Outputs: ['/entropy_bottleneck/Add_7_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_6
+  - Operator Type: Tanh
+  - Inputs: ['entropy_bottleneck.factors.3']
+  - Outputs: ['/entropy_bottleneck/Tanh_6_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_7
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_7_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_7_output_0']
+
+Node Name: /entropy_bottleneck/Mul_3
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_6_output_0', '/entropy_bottleneck/Tanh_7_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_3_output_0']
+
+Node Name: /entropy_bottleneck/Add_8
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_7_output_0', '/entropy_bottleneck/Mul_3_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_8_output_0']
+
+Node Name: /entropy_bottleneck/Softplus_4
+  - Operator Type: Softplus
+  - Inputs: ['entropy_bottleneck.matrices.4']
+  - Outputs: ['/entropy_bottleneck/Softplus_4_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_4
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_4_output_0', '/entropy_bottleneck/Add_8_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_4_output_0']
+
+Node Name: /entropy_bottleneck/Add_9
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_4_output_0', 'entropy_bottleneck.biases.4']
+  - Outputs: ['/entropy_bottleneck/Add_9_output_0']
+
+Node Name: /entropy_bottleneck/Constant_10
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/entropy_bottleneck/Constant_10_output_0']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Add_10
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_output_0', '/entropy_bottleneck/Constant_10_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_10_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_5
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_output_0', '/entropy_bottleneck/Add_10_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_5_output_0']
+
+Node Name: /entropy_bottleneck/Add_11
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_5_output_0', 'entropy_bottleneck.biases.0']
+  - Outputs: ['/entropy_bottleneck/Add_11_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_8
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_11_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_8_output_0']
+
+Node Name: /entropy_bottleneck/Mul_4
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_output_0', '/entropy_bottleneck/Tanh_8_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_4_output_0']
+
+Node Name: /entropy_bottleneck/Add_12
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_11_output_0', '/entropy_bottleneck/Mul_4_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_12_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_6
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_1_output_0', '/entropy_bottleneck/Add_12_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_6_output_0']
+
+Node Name: /entropy_bottleneck/Add_13
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_6_output_0', 'entropy_bottleneck.biases.1']
+  - Outputs: ['/entropy_bottleneck/Add_13_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_9
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_13_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_9_output_0']
+
+Node Name: /entropy_bottleneck/Mul_5
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_2_output_0', '/entropy_bottleneck/Tanh_9_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_5_output_0']
+
+Node Name: /entropy_bottleneck/Add_14
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_13_output_0', '/entropy_bottleneck/Mul_5_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_14_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_7
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_2_output_0', '/entropy_bottleneck/Add_14_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_7_output_0']
+
+Node Name: /entropy_bottleneck/Add_15
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_7_output_0', 'entropy_bottleneck.biases.2']
+  - Outputs: ['/entropy_bottleneck/Add_15_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_10
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_15_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_10_output_0']
+
+Node Name: /entropy_bottleneck/Mul_6
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_4_output_0', '/entropy_bottleneck/Tanh_10_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_6_output_0']
+
+Node Name: /entropy_bottleneck/Add_16
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_15_output_0', '/entropy_bottleneck/Mul_6_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_16_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_8
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_3_output_0', '/entropy_bottleneck/Add_16_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_8_output_0']
+
+Node Name: /entropy_bottleneck/Add_17
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_8_output_0', 'entropy_bottleneck.biases.3']
+  - Outputs: ['/entropy_bottleneck/Add_17_output_0']
+
+Node Name: /entropy_bottleneck/Tanh_11
+  - Operator Type: Tanh
+  - Inputs: ['/entropy_bottleneck/Add_17_output_0']
+  - Outputs: ['/entropy_bottleneck/Tanh_11_output_0']
+
+Node Name: /entropy_bottleneck/Mul_7
+  - Operator Type: Mul
+  - Inputs: ['/entropy_bottleneck/Tanh_6_output_0', '/entropy_bottleneck/Tanh_11_output_0']
+  - Outputs: ['/entropy_bottleneck/Mul_7_output_0']
+
+Node Name: /entropy_bottleneck/Add_18
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/Add_17_output_0', '/entropy_bottleneck/Mul_7_output_0']
+  - Outputs: ['/entropy_bottleneck/Add_18_output_0']
+
+Node Name: /entropy_bottleneck/MatMul_9
+  - Operator Type: MatMul
+  - Inputs: ['/entropy_bottleneck/Softplus_4_output_0', '/entropy_bottleneck/Add_18_output_0']
+  - Outputs: ['/entropy_bottleneck/MatMul_9_output_0']
+
+Node Name: /entropy_bottleneck/Add_19
+  - Operator Type: Add
+  - Inputs: ['/entropy_bottleneck/MatMul_9_output_0', 'entropy_bottleneck.biases.4']
+  - Outputs: ['/entropy_bottleneck/Add_19_output_0']
+
+Node Name: /entropy_bottleneck/Sigmoid
+  - Operator Type: Sigmoid
+  - Inputs: ['/entropy_bottleneck/Add_19_output_0']
+  - Outputs: ['/entropy_bottleneck/Sigmoid_output_0']
+
+Node Name: /entropy_bottleneck/Sigmoid_1
+  - Operator Type: Sigmoid
+  - Inputs: ['/entropy_bottleneck/Add_9_output_0']
+  - Outputs: ['/entropy_bottleneck/Sigmoid_1_output_0']
+
+Node Name: /entropy_bottleneck/Sub_2
+  - Operator Type: Sub
+  - Inputs: ['/entropy_bottleneck/Sigmoid_output_0', '/entropy_bottleneck/Sigmoid_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Sub_2_output_0']
+
+Node Name: /entropy_bottleneck/likelihood_lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['/entropy_bottleneck/Sub_2_output_0', 'entropy_bottleneck.likelihood_lower_bound.bound']
+  - Outputs: ['/entropy_bottleneck/likelihood_lower_bound/Max_output_0']
+
+Node Name: Constant_281
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_258']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_7
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_output_0', 'onnx::Unsqueeze_258']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_7_output_0']
+
+Node Name: Constant_283
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_260']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_8
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_1_output_0', 'onnx::Unsqueeze_260']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_8_output_0']
+
+Node Name: Constant_285
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_262']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_9
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_2_output_0', 'onnx::Unsqueeze_262']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_9_output_0']
+
+Node Name: Constant_287
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_264']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_10
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_3_output_0', 'onnx::Unsqueeze_264']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_10_output_0']
+
+Node Name: /entropy_bottleneck/Concat_1
+  - Operator Type: Concat
+  - Inputs: ['/entropy_bottleneck/Unsqueeze_7_output_0', '/entropy_bottleneck/Unsqueeze_8_output_0', '/entropy_bottleneck/Unsqueeze_9_output_0', '/entropy_bottleneck/Unsqueeze_10_output_0']
+  - Outputs: ['/entropy_bottleneck/Concat_1_output_0']
+  - Attribute Name: axis
+
+Node Name: Constant_290
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_267']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_11
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_output_0', 'onnx::Unsqueeze_267']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_11_output_0']
+
+Node Name: Constant_292
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_269']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_12
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_1_output_0', 'onnx::Unsqueeze_269']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_12_output_0']
+
+Node Name: Constant_294
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_271']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_13
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_2_output_0', 'onnx::Unsqueeze_271']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_13_output_0']
+
+Node Name: Constant_296
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_273']
+  - Attribute Name: value
+
+Node Name: /entropy_bottleneck/Unsqueeze_14
+  - Operator Type: Unsqueeze
+  - Inputs: ['/entropy_bottleneck/Gather_3_output_0', 'onnx::Unsqueeze_273']
+  - Outputs: ['/entropy_bottleneck/Unsqueeze_14_output_0']
+
+Node Name: /entropy_bottleneck/Concat_2
+  - Operator Type: Concat
+  - Inputs: ['/entropy_bottleneck/Unsqueeze_11_output_0', '/entropy_bottleneck/Unsqueeze_12_output_0', '/entropy_bottleneck/Unsqueeze_13_output_0', '/entropy_bottleneck/Unsqueeze_14_output_0']
+  - Outputs: ['/entropy_bottleneck/Concat_2_output_0']
+  - Attribute Name: axis
+
+Node Name: /entropy_bottleneck/Reshape_1
+  - Operator Type: Reshape
+  - Inputs: ['/entropy_bottleneck/Add_output_0', '/entropy_bottleneck/Concat_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Reshape_1_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /entropy_bottleneck/Transpose_1
+  - Operator Type: Transpose
+  - Inputs: ['/entropy_bottleneck/Reshape_1_output_0']
+  - Outputs: ['/entropy_bottleneck/Transpose_1_output_0']
+  - Attribute Name: perm
+
+Node Name: /entropy_bottleneck/Reshape_2
+  - Operator Type: Reshape
+  - Inputs: ['/entropy_bottleneck/likelihood_lower_bound/Max_output_0', '/entropy_bottleneck/Concat_2_output_0']
+  - Outputs: ['/entropy_bottleneck/Reshape_2_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /entropy_bottleneck/Transpose_2
+  - Operator Type: Transpose
+  - Inputs: ['/entropy_bottleneck/Reshape_2_output_0']
+  - Outputs: ['279']
+  - Attribute Name: perm
+
+Node Name: /g_s/g_s.0/ConvTranspose
+  - Operator Type: ConvTranspose
+  - Inputs: ['/entropy_bottleneck/Transpose_1_output_0', 'g_s.0.weight', 'g_s.0.bias']
+  - Outputs: ['/g_s/g_s.0/ConvTranspose_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: output_padding
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.1/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_s/g_s.0/ConvTranspose_output_0']
+  - Outputs: ['/g_s/g_s.1/Shape_output_0']
+
+Node Name: /g_s/g_s.1/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.1/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_s/g_s.1/Shape_output_0', '/g_s/g_s.1/Constant_output_0']
+  - Outputs: ['/g_s/g_s.1/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.1/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.1.beta', 'g_s.1.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.1/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.1/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.1/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.1/beta_reparam/lower_bound/Max_output_0', '/g_s/g_s.1/beta_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.1/beta_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.1/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.1/beta_reparam/Pow_output_0', 'g_s.1.beta_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.1/beta_reparam/Sub_output_0']
+
+Node Name: /g_s/g_s.1/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.1.gamma', 'g_s.1.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.1/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.1/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.1/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.1/gamma_reparam/lower_bound/Max_output_0', '/g_s/g_s.1/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.1/gamma_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.1/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.1/gamma_reparam/Pow_output_0', 'g_s.1.gamma_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.1/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_315
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_292']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.1/Gather_output_0', 'onnx::Unsqueeze_292']
+  - Outputs: ['/g_s/g_s.1/Unsqueeze_output_0']
+
+Node Name: Constant_317
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_294']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.1/Gather_output_0', 'onnx::Unsqueeze_294']
+  - Outputs: ['/g_s/g_s.1/Unsqueeze_1_output_0']
+
+Node Name: Constant_319
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_296']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_296']
+  - Outputs: ['/g_s/g_s.1/Unsqueeze_2_output_0']
+
+Node Name: Constant_321
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_298']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_298']
+  - Outputs: ['/g_s/g_s.1/Unsqueeze_3_output_0']
+
+Node Name: /g_s/g_s.1/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_s/g_s.1/Unsqueeze_output_0', '/g_s/g_s.1/Unsqueeze_1_output_0', '/g_s/g_s.1/Unsqueeze_2_output_0', '/g_s/g_s.1/Unsqueeze_3_output_0']
+  - Outputs: ['/g_s/g_s.1/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.1/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_s/g_s.1/gamma_reparam/Sub_output_0', '/g_s/g_s.1/Concat_output_0']
+  - Outputs: ['/g_s/g_s.1/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_s/g_s.1/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.1/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.1/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.0/ConvTranspose_output_0', '/g_s/g_s.1/Constant_1_output_0']
+  - Outputs: ['/g_s/g_s.1/Pow_output_0']
+
+Node Name: /g_s/g_s.1/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_s/g_s.1/Pow_output_0', '/g_s/g_s.1/Reshape_output_0', '/g_s/g_s.1/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_s/g_s.1/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.1/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_s/g_s.1/Conv_output_0']
+  - Outputs: ['/g_s/g_s.1/Sqrt_output_0']
+
+Node Name: /g_s/g_s.1/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_s/g_s.0/ConvTranspose_output_0', '/g_s/g_s.1/Sqrt_output_0']
+  - Outputs: ['/g_s/g_s.1/Mul_output_0']
+
+Node Name: /g_s/g_s.2/ConvTranspose
+  - Operator Type: ConvTranspose
+  - Inputs: ['/g_s/g_s.1/Mul_output_0', 'g_s.2.weight', 'g_s.2.bias']
+  - Outputs: ['/g_s/g_s.2/ConvTranspose_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: output_padding
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.3/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_s/g_s.2/ConvTranspose_output_0']
+  - Outputs: ['/g_s/g_s.3/Shape_output_0']
+
+Node Name: /g_s/g_s.3/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.3/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_s/g_s.3/Shape_output_0', '/g_s/g_s.3/Constant_output_0']
+  - Outputs: ['/g_s/g_s.3/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.3/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.3.beta', 'g_s.3.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.3/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.3/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.3/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.3/beta_reparam/lower_bound/Max_output_0', '/g_s/g_s.3/beta_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.3/beta_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.3/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.3/beta_reparam/Pow_output_0', 'g_s.3.beta_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.3/beta_reparam/Sub_output_0']
+
+Node Name: /g_s/g_s.3/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.3.gamma', 'g_s.3.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.3/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.3/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.3/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.3/gamma_reparam/lower_bound/Max_output_0', '/g_s/g_s.3/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.3/gamma_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.3/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.3/gamma_reparam/Pow_output_0', 'g_s.3.gamma_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.3/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_342
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_319']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.3/Gather_output_0', 'onnx::Unsqueeze_319']
+  - Outputs: ['/g_s/g_s.3/Unsqueeze_output_0']
+
+Node Name: Constant_344
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_321']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.3/Gather_output_0', 'onnx::Unsqueeze_321']
+  - Outputs: ['/g_s/g_s.3/Unsqueeze_1_output_0']
+
+Node Name: Constant_346
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_323']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_323']
+  - Outputs: ['/g_s/g_s.3/Unsqueeze_2_output_0']
+
+Node Name: Constant_348
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_325']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_325']
+  - Outputs: ['/g_s/g_s.3/Unsqueeze_3_output_0']
+
+Node Name: /g_s/g_s.3/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_s/g_s.3/Unsqueeze_output_0', '/g_s/g_s.3/Unsqueeze_1_output_0', '/g_s/g_s.3/Unsqueeze_2_output_0', '/g_s/g_s.3/Unsqueeze_3_output_0']
+  - Outputs: ['/g_s/g_s.3/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.3/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_s/g_s.3/gamma_reparam/Sub_output_0', '/g_s/g_s.3/Concat_output_0']
+  - Outputs: ['/g_s/g_s.3/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_s/g_s.3/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.3/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.3/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.2/ConvTranspose_output_0', '/g_s/g_s.3/Constant_1_output_0']
+  - Outputs: ['/g_s/g_s.3/Pow_output_0']
+
+Node Name: /g_s/g_s.3/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_s/g_s.3/Pow_output_0', '/g_s/g_s.3/Reshape_output_0', '/g_s/g_s.3/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_s/g_s.3/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.3/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_s/g_s.3/Conv_output_0']
+  - Outputs: ['/g_s/g_s.3/Sqrt_output_0']
+
+Node Name: /g_s/g_s.3/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_s/g_s.2/ConvTranspose_output_0', '/g_s/g_s.3/Sqrt_output_0']
+  - Outputs: ['/g_s/g_s.3/Mul_output_0']
+
+Node Name: /g_s/g_s.4/ConvTranspose
+  - Operator Type: ConvTranspose
+  - Inputs: ['/g_s/g_s.3/Mul_output_0', 'g_s.4.weight', 'g_s.4.bias']
+  - Outputs: ['/g_s/g_s.4/ConvTranspose_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: output_padding
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.5/Shape
+  - Operator Type: Shape
+  - Inputs: ['/g_s/g_s.4/ConvTranspose_output_0']
+  - Outputs: ['/g_s/g_s.5/Shape_output_0']
+
+Node Name: /g_s/g_s.5/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.5/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Gather
+  - Operator Type: Gather
+  - Inputs: ['/g_s/g_s.5/Shape_output_0', '/g_s/g_s.5/Constant_output_0']
+  - Outputs: ['/g_s/g_s.5/Gather_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.5/beta_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.5.beta', 'g_s.5.beta_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.5/beta_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.5/beta_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.5/beta_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/beta_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.5/beta_reparam/lower_bound/Max_output_0', '/g_s/g_s.5/beta_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.5/beta_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.5/beta_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.5/beta_reparam/Pow_output_0', 'g_s.5.beta_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.5/beta_reparam/Sub_output_0']
+
+Node Name: /g_s/g_s.5/gamma_reparam/lower_bound/Max
+  - Operator Type: Max
+  - Inputs: ['g_s.5.gamma', 'g_s.5.gamma_reparam.lower_bound.bound']
+  - Outputs: ['/g_s/g_s.5/gamma_reparam/lower_bound/Max_output_0']
+
+Node Name: /g_s/g_s.5/gamma_reparam/Constant
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.5/gamma_reparam/Constant_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/gamma_reparam/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.5/gamma_reparam/lower_bound/Max_output_0', '/g_s/g_s.5/gamma_reparam/Constant_output_0']
+  - Outputs: ['/g_s/g_s.5/gamma_reparam/Pow_output_0']
+
+Node Name: /g_s/g_s.5/gamma_reparam/Sub
+  - Operator Type: Sub
+  - Inputs: ['/g_s/g_s.5/gamma_reparam/Pow_output_0', 'g_s.5.gamma_reparam.pedestal']
+  - Outputs: ['/g_s/g_s.5/gamma_reparam/Sub_output_0']
+
+Node Name: Constant_369
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_346']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Unsqueeze
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.5/Gather_output_0', 'onnx::Unsqueeze_346']
+  - Outputs: ['/g_s/g_s.5/Unsqueeze_output_0']
+
+Node Name: Constant_371
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_348']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Unsqueeze_1
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_s/g_s.5/Gather_output_0', 'onnx::Unsqueeze_348']
+  - Outputs: ['/g_s/g_s.5/Unsqueeze_1_output_0']
+
+Node Name: Constant_373
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_350']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Unsqueeze_2
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_350']
+  - Outputs: ['/g_s/g_s.5/Unsqueeze_2_output_0']
+
+Node Name: Constant_375
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['onnx::Unsqueeze_352']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Unsqueeze_3
+  - Operator Type: Unsqueeze
+  - Inputs: ['/g_a/g_a.0/Constant_output_0', 'onnx::Unsqueeze_352']
+  - Outputs: ['/g_s/g_s.5/Unsqueeze_3_output_0']
+
+Node Name: /g_s/g_s.5/Concat
+  - Operator Type: Concat
+  - Inputs: ['/g_s/g_s.5/Unsqueeze_output_0', '/g_s/g_s.5/Unsqueeze_1_output_0', '/g_s/g_s.5/Unsqueeze_2_output_0', '/g_s/g_s.5/Unsqueeze_3_output_0']
+  - Outputs: ['/g_s/g_s.5/Concat_output_0']
+  - Attribute Name: axis
+
+Node Name: /g_s/g_s.5/Reshape
+  - Operator Type: Reshape
+  - Inputs: ['/g_s/g_s.5/gamma_reparam/Sub_output_0', '/g_s/g_s.5/Concat_output_0']
+  - Outputs: ['/g_s/g_s.5/Reshape_output_0']
+  - Attribute Name: allowzero
+
+Node Name: /g_s/g_s.5/Constant_1
+  - Operator Type: Constant
+  - Inputs: []
+  - Outputs: ['/g_s/g_s.5/Constant_1_output_0']
+  - Attribute Name: value
+
+Node Name: /g_s/g_s.5/Pow
+  - Operator Type: Pow
+  - Inputs: ['/g_s/g_s.4/ConvTranspose_output_0', '/g_s/g_s.5/Constant_1_output_0']
+  - Outputs: ['/g_s/g_s.5/Pow_output_0']
+
+Node Name: /g_s/g_s.5/Conv
+  - Operator Type: Conv
+  - Inputs: ['/g_s/g_s.5/Pow_output_0', '/g_s/g_s.5/Reshape_output_0', '/g_s/g_s.5/beta_reparam/Sub_output_0']
+  - Outputs: ['/g_s/g_s.5/Conv_output_0']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Node Name: /g_s/g_s.5/Sqrt
+  - Operator Type: Sqrt
+  - Inputs: ['/g_s/g_s.5/Conv_output_0']
+  - Outputs: ['/g_s/g_s.5/Sqrt_output_0']
+
+Node Name: /g_s/g_s.5/Mul
+  - Operator Type: Mul
+  - Inputs: ['/g_s/g_s.4/ConvTranspose_output_0', '/g_s/g_s.5/Sqrt_output_0']
+  - Outputs: ['/g_s/g_s.5/Mul_output_0']
+
+Node Name: /g_s/g_s.6/ConvTranspose
+  - Operator Type: ConvTranspose
+  - Inputs: ['/g_s/g_s.5/Mul_output_0', 'g_s.6.weight', 'g_s.6.bias']
+  - Outputs: ['output']
+  - Attribute Name: dilations
+  - Attribute Name: group
+  - Attribute Name: kernel_shape
+  - Attribute Name: output_padding
+  - Attribute Name: pads
+  - Attribute Name: strides
+
+Model Weights (Initializers):
+
+Initializer Name: entropy_bottleneck.quantiles
+  - Shape: (192, 1, 3)
+  - Data Type: 1
+  - Values (First 5): [-12.184065     0.01383079  12.221952    -5.4322143    0.144852  ]
+
+Initializer Name: entropy_bottleneck.likelihood_lower_bound.bound
+  - Shape: (1,)
+  - Data Type: 1
+  - Values (First 5): [1.e-09]
+
+Initializer Name: entropy_bottleneck.matrices.0
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [-8.563933  -6.857641   3.4651735 11.474104  11.508286 ]
+
+Initializer Name: entropy_bottleneck.matrices.1
+  - Shape: (192, 3, 3)
+  - Data Type: 1
+  - Values (First 5): [-2.8518636  -5.2396607   0.07452361 -1.0823522  -4.8739023 ]
+
+Initializer Name: entropy_bottleneck.matrices.2
+  - Shape: (192, 3, 3)
+  - Data Type: 1
+  - Values (First 5): [-1.166709  -0.4156325 -1.1663681 -1.1724225 -0.4135137]
+
+Initializer Name: entropy_bottleneck.matrices.3
+  - Shape: (192, 3, 3)
+  - Data Type: 1
+  - Values (First 5): [-1.6072756 -1.6822491 -1.6948451 -1.5958402 -1.6730739]
+
+Initializer Name: entropy_bottleneck.matrices.4
+  - Shape: (192, 1, 3)
+  - Data Type: 1
+  - Values (First 5): [-1.4549096  -1.3423367  -1.4691252   0.07497398 -1.1194615 ]
+
+Initializer Name: entropy_bottleneck.biases.0
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [-0.16343234 -0.02980042 -0.04211974 -1.664318   -1.6693614 ]
+
+Initializer Name: entropy_bottleneck.biases.1
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [ 0.0160158   0.07700579  0.01580812 -0.00112594 -0.00112499]
+
+Initializer Name: entropy_bottleneck.biases.2
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [-0.00548133 -0.00545567 -0.0054614  -0.0006462  -0.00064462]
+
+Initializer Name: entropy_bottleneck.biases.3
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [-0.00171544 -0.00167039 -0.00173094 -0.00030331 -0.00030643]
+
+Initializer Name: entropy_bottleneck.biases.4
+  - Shape: (192, 1, 1)
+  - Data Type: 1
+  - Values (First 5): [-0.00584367  0.00195578  0.00842932  0.42499712  0.06387255]
+
+Initializer Name: entropy_bottleneck.factors.0
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [6.711729  6.7129855 7.436957  7.4642696 7.7046375]
+
+Initializer Name: entropy_bottleneck.factors.1
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [6.780925 7.433126 6.780474 8.001123 8.038164]
+
+Initializer Name: entropy_bottleneck.factors.2
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [7.1764283 7.1408195 7.135499  8.000025  8.13904  ]
+
+Initializer Name: entropy_bottleneck.factors.3
+  - Shape: (192, 3, 1)
+  - Data Type: 1
+  - Values (First 5): [7.0937076 7.1910505 7.0699344 8.461617  8.045572 ]
+
+Initializer Name: g_a.0.weight
+  - Shape: (128, 3, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [-0.07865194 -0.10003603  0.03959137  0.07459416  0.08557799]
+
+Initializer Name: g_a.0.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [-3.9675389e-03  4.8516275e-04  5.9824968e-03  9.8098472e-02
+  8.7806213e-05]
+
+Initializer Name: g_a.1.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [1.9111714  1.6808202  2.2257028  2.2772543  0.69374776]
+
+Initializer Name: g_a.1.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [4.3871620e-01 3.8164449e-06 3.8552371e-06 1.7006288e+00 4.4793878e-06]
+
+Initializer Name: g_a.1.beta_reparam.pedestal
+  - Shape: (1,)
+  - Data Type: 1
+  - Values (First 5): [1.4551915e-11]
+
+Initializer Name: g_a.1.beta_reparam.lower_bound.bound
+  - Shape: (1,)
+  - Data Type: 1
+  - Values (First 5): [0.00100001]
+
+Initializer Name: g_a.1.gamma_reparam.lower_bound.bound
+  - Shape: (1,)
+  - Data Type: 1
+  - Values (First 5): [3.8146973e-06]
+
+Initializer Name: g_a.2.weight
+  - Shape: (128, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [0.08982614 0.28083724 0.26143426 0.08491866 0.00469891]
+
+Initializer Name: g_a.2.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [-0.04282075 -0.044732    0.14836602 -0.09986626  0.00893299]
+
+Initializer Name: g_a.3.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [2.461648  2.3033736 2.9596076 1.9475571 2.4777205]
+
+Initializer Name: g_a.3.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [3.1115959e+00 3.8234584e-06 6.9562632e-01 6.6558325e-01 5.5596578e-01]
+
+Initializer Name: g_a.4.weight
+  - Shape: (128, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [ 0.0362732  -0.02791664 -0.12109091  0.08208698  0.07516854]
+
+Initializer Name: g_a.4.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [ 0.01855466 -0.02497042  0.03588101 -0.00427864  0.02563638]
+
+Initializer Name: g_a.5.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [ 4.648724   7.6060185 16.610283   6.4774203  5.1991844]
+
+Initializer Name: g_a.5.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [6.1976852e+00 5.2382364e+00 3.8162138e-06 3.8197686e-06 3.8139426e-06]
+
+Initializer Name: g_a.6.weight
+  - Shape: (192, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [-0.00016194  0.0027293  -0.01560607  0.01229301 -0.01033488]
+
+Initializer Name: g_a.6.bias
+  - Shape: (192,)
+  - Data Type: 1
+  - Values (First 5): [-0.01471509  0.16287868  0.0135164   0.35206303 -0.00673614]
+
+Initializer Name: g_s.0.weight
+  - Shape: (192, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [0.00031358 0.00257681 0.00023055 0.00176603 0.00650026]
+
+Initializer Name: g_s.0.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [-1.483314    0.15874507  0.02634417  0.10163125  0.17998685]
+
+Initializer Name: g_s.1.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [0.0680718  0.08044273 0.00620792 0.00100359 0.00098363]
+
+Initializer Name: g_s.1.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [-1.1465772e-04  1.5943003e-03  2.2915681e-03  3.7352643e-06
+  3.4396690e-03]
+
+Initializer Name: g_s.2.weight
+  - Shape: (128, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [-0.00023584 -0.06574     0.0404558  -0.08013149 -0.02588295]
+
+Initializer Name: g_s.2.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [ 0.00174115 -0.07770594 -0.00275888  0.12717173 -0.06626157]
+
+Initializer Name: g_s.3.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [0.00098406 0.00099866 0.00101633 0.00099603 0.03533137]
+
+Initializer Name: g_s.3.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [-3.2081556e-05  1.9248659e-02  1.7427251e-02  2.0421153e-02
+  3.7699238e-06]
+
+Initializer Name: g_s.4.weight
+  - Shape: (128, 128, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [ 0.01023421 -0.03076436 -0.00134934 -0.1530759   0.03755372]
+
+Initializer Name: g_s.4.bias
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [ 0.00432915  0.03646551  0.00184807  0.00086523 -0.01925813]
+
+Initializer Name: g_s.5.beta
+  - Shape: (128,)
+  - Data Type: 1
+  - Values (First 5): [0.00100927 0.00106454 0.00104884 0.01495001 0.02086574]
+
+Initializer Name: g_s.5.gamma
+  - Shape: (128, 128)
+  - Data Type: 1
+  - Values (First 5): [5.0499284e-01 3.1903413e-01 2.9103364e-06 1.9762224e-01 6.2213197e-02]
+
+Initializer Name: g_s.6.weight
+  - Shape: (128, 3, 5, 5)
+  - Data Type: 1
+  - Values (First 5): [-0.0109961  -0.02182352  0.00418911  0.07170995  0.06487046]
+
+Initializer Name: g_s.6.bias
+  - Shape: (3,)
+  - Data Type: 1
+  - Values (First 5): [0.23376888 0.21687979 0.20348668]
+
+Model information extraction completed.

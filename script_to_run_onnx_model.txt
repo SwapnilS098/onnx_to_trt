@@ -1,0 +1,41 @@
+ This is the readme for running the model_export_pytorch_onnx.py script 
+
+
+ It requires  the compresssAI environment for running the script
+
+
+ usage: model_export_pytorch_onnx.py [-h] [--model_name MODEL_NAME] [--quality QUALITY] [--metric METRIC] [--image_path IMAGE_PATH] [--h_w_shape H_W_SHAPE H_W_SHAPE] [--export_path EXPORT_PATH] [--export_name EXPORT_NAME] [--model_path MODEL_PATH] [--gray]
+                                    [--inference] [--second_quality SECOND_QUALITY]
+
+Export the Image compression PyTorch model to the ONNX
+
+options:
+  -h, --help            show this help message and exit
+  --model_name MODEL_NAME
+                        choose among['bmshj2018-factorized', 'bmshj2018-factorized-relu', 'bmshj2018-hyperprior', 'mbt2018-mean', 'mbt2018', 'cheng2020-anchor', 'cheng2020-attn', 'bmshj2018-hyperprior-vbr', 'mbt2018-mean-vbr', 'mbt2018-vbr', 'hrtzxf2022-pcc-
+                        rec', 'sfu2023-pcc-rec-pointnet', 'sfu2024-pcc-rec-pointnet2-ssg', 'ssf2020']
+  --quality QUALITY     choose among 1 to 8 for some models, 1 to 6 for some other models
+  --metric METRIC       choose ms-ssim or mse
+  --image_path IMAGE_PATH
+                        Path to the image file
+  --h_w_shape H_W_SHAPE H_W_SHAPE
+                        input image [height,width] like [720,1280]
+  --export_path EXPORT_PATH
+                        Path to export the ONNX model
+  --export_name EXPORT_NAME
+                        Name of the exported ONNX file with the .onnx extension
+  --model_path MODEL_PATH
+                        Path to the model checkpoint.pth.tar file
+  --gray                convert the model to grayscale
+  --inference           run the inference on the model
+  --second_quality SECOND_QUALITY
+                        Give values in between the 0 to 100 to determine the secondary encoder's quality parameter
+
+
+
+python model_export_pytorch_onnx.py --h_w_shape 720 1280 --export_path C:\Swapnil\Narrowband_DRONE\Image_compression_code\Final_DL_compession_September_24\fine_tune_to_trt 
+--export_name DL_model_HD_4.onnx --inference --image_path C:\Swapnil\Narrowband_DRONE\Image_compression_code\Final_DL_compession_September_24\fine_tune_to_trt\image.png --second_quality 90
+
+
+python model_export_pytorch_onnx.py --h_w_shape 720 1280 --export_path C:\Swapnil\Narrowband_DRONE\Image_compression_code\Final_DL_compession_September_24\fine_tune_to_trt 
+--export_name DL_model_HD_4.onnx --inference --image_path C:\Swapnil\Narrowband_DRONE\Image_compression_code\Final_DL_compession_September_24\fine_tune_to_trt\image.png --second_quality 90 --gray
