@@ -19,6 +19,11 @@ import model_export_pytorch_onnx as onnx_model_builder
 #importing the trt model builderr
 import trt_main as trt_model_builder
 
+
+#importing the overall quality evaluation
+import overall_dataset_quality_eval as quality_eval
+
+
 import os 
 import time
 import argparse
@@ -65,6 +70,19 @@ class DL_TRT_inference:
         
         
         self.dataset_path=args.image_dataset_path
+        
+        self.images_path=None #this is a empty variable which can be set later for giving input to the 
+        #quality evaluation.It can be set to any of the valid images dataset path
+        
+        if args.complete:
+            self.complete=True
+        elif args.sfm_quality:
+            self.complete=False
+            self.sfm_quality=True
+        else:
+            self.complete=False
+            self.sfm_quality=False
+        
                
     def make_args_for_onnx(self):
         
@@ -136,6 +154,22 @@ class DL_TRT_inference:
         
         return args_trt
     
+    def make_args_for_quality_eval(self,project_path):
+        
+        args_quality=argparse.Namespace()
+        
+        args_quality.org_dataset_path=self.dataset_path
+        args_quality.recon_dataset_path=os.path.join(self.project_path,"exported_data")
+        
+        args_quality.project_path=project_path #self.project_path
+        args_quality.images_path=self.images_path
+        
+        args_quality.complete=self.complete
+        args_quality.sfm_quality=self.sfm_quality
+        
+        
+        return args_quality
+    
     
     def main(self,args):
         
@@ -169,6 +203,29 @@ class DL_TRT_inference:
         trt_version=trt_model_builder.TRT_version(args_trt)
         trt_version.trt_main()
         
+        #Now running the SFM quality evaluation for the orginal images dataset
+        project_path=self.project_path
+        args_quality=self.make_args_for_quality_eval(project_path) #get the arguments for the quality evaluation
+        
+        quality_eval_obj=quality_eval.Quality_eval(args_quality) #make the object of the quality evaluation
+        
+        #first evaluate for the original images dataset
+        self.images_path=self.dataset_path 
+        quality_eval_obj.main_new(args_quality) #and the project path is same as the already set
+        
+        
+        #now for the reconstructed images dataset
+        project_path=os.path.join(self.project_path,"exported_data")
+        self.images_path=os.path.join(self.project_path,"exported_data")
+        args_quality=self.make_args_for_quality_eval(project_path) #get the arguments for the quality evaluation
+        
+        quality_eval_obj=quality_eval.Quality_eval(args_quality) #make the object of the quality evaluation
+        
+        
+        quality_eval_obj.main_new(args_quality) #and the project path is same as the already set
+        
+        
+        
         
         
     
@@ -190,6 +247,8 @@ if __name__=="__main__":
     parser.add_argument("--gray",action="store_true",help="If the model is to be made grayscale then use this as flag")
     parser.add_argument("--trt_model_name",type=str,required=True,help="Name of the exported tensorRT_onnx_model")    
      
+    parser.add_argument("--complete",action="store_true",help="If the complete dataset both the image and the SFM quality evaluation happens")
+    parser.add_argument("--sfm_quality",action="store_true",help="Run the sfm quality evaluation")
     
     
     args= parser.parse_args()
